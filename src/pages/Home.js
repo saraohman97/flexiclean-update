@@ -10,10 +10,12 @@ const Home = () => {
         <p>Idag rinner tusentals liter olja och tungmetaller rakt ut ur städerna i sällskap med regn- och smutsvatten från vägar och parkeringsplatser.  FlexiClean har tagit fram en filterhållaren som renar dagvattnet. </p>
       </header>
 
-      <section>
+      <section className='home'>
         <main className="home-main">
           <h1>Västmanlands miljö- och <br /> klimatpris 2019</h1>
-          <img src={img} className='home-main-img' alt="winner klimatpris" />
+          <div className='home-main-img'>
+            <img src={img} alt="winner klimatpris" />
+          </div>
           <p>
             <strong>Juryns motivering:</strong> <br />
             Västmanlands miljö- och klimatpris 2019 går till FlexiClean AB för sitt arbete med att förbättra vattenmiljöer genom att ta tag i en av vår tids stora miljöproblem, kemikalier som sprids i dagvattnet. FlexiClean har utvecklat filter som fångar upp tungmetaller, oljeföroreningar och även PFAS. PFAS är cancerframkallande ämnen som bland annat finns i våra textilier och ibland beskrivs som vår tids värsta miljögift.
@@ -30,7 +32,7 @@ const Home = () => {
         </main>
 
         <div className="home-sidebar">
-        <h3 className='home-sidebar-title'>Nyheter</h3>
+          <h3 className='home-sidebar-title'>Nyheter</h3>
           <div className="sidebar-item">
             <img src={newsimg} alt="" />
             <small className='sidebar-date'>15 april, 2023</small>
