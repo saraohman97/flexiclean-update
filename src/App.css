@@ -6,11 +6,14 @@
   --main-clr: #F8F7F7;
   --second-clr: #00A0E6;
   --third-clr: #205065;
+
+  --box-shadow: 0 3px 6px rgba(0, 0, 0, 0.078);
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 html, 
 body {
@@ -42,11 +45,13 @@ section {
   max-width: 1350px;
 }
 
+
 /* ---------buttons----------- */
 .btn {
   border: none;
   padding: .3rem 1.2rem;
   border-radius: 20px;
+  width: fit-content;
 }
 .btn-gray {
   background-color: var(--main-clr);
@@ -55,6 +60,17 @@ section {
 .btn-blue {
   background-color: var(--second-clr);
   color: var(--text-clr-light);
+}
+.btn-close {
+  cursor: pointer;
+  width: fit-content;
+  align-self: flex-end;
+  padding: .5rem;
+}
+.btn-close:hover {
+  color: var(--third-clr);
+  border-radius: 50%;
+  background-color: var(--main-clr);
 }
 
 
@@ -73,10 +89,12 @@ nav {
 }
 .nav-link {
   padding: .5rem 1rem;
+  width: fit-content;
 }
 .nav-link:hover {
-  color: rgb(148, 148, 148);
   cursor: pointer;
+  color: var(--third-clr);
+  border-bottom: 1px solid;
 }
 .nav-logo {
   height: 2.5rem;
@@ -84,6 +102,77 @@ nav {
 .nav-links {
   display: none;
 }
+
+/* ---------dropdown----------- */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  width: 11rem;
+  z-index: 20;
+  top: 2.1rem;
+  right: 0;
+
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+}
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  align-items: flex-end;
+}
+.line {
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+}
+.drop {
+  padding-block: 1rem;
+}
+
+
+
+/* ---------menu modal----------- */
+.menu-content {
+  position: absolute;
+  z-index: 50;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  
+  height: 100vh;
+  width: 300px;
+  background-color: var(--bg-clr);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-end;
+}
+.menu-content .nav-link {
+  align-self: flex-end;
+}
+.menu-content .nav-link:hover {
+  color: var(--third-clr);
+}
+.menu-df {
+  display: flex;
+  flex-direction: column;
+}
+.menu-df .nav-link {
+  color: rgb(122, 122, 122);
+}
+
+
 
 /* ---------hero section----------- */
 .hero {
@@ -169,6 +258,8 @@ nav {
 }
 
 
+
+
 /* for small devices */
 @media screen and (max-width: 350px) {
   .footer-links {
@@ -184,11 +275,11 @@ nav {
   }
 }
 @media screen and (min-width: 750px) {
-  .btn-meny {
+  .menu, .menu-content {
     display: none;
   }
   .nav-links {
-    display: block;
+    display: flex;
     padding-right: 1rem;
   }
   .hero h1 {
