@@ -17,8 +17,10 @@ const Navbar = () => {
                     Produkter
                     <AiOutlineDown />
                     <div className="dropdown-content">
-                        <NavLink to='/produkter' className='nav-link line drop'>Dagvatten- och granulatfilter</NavLink>
-                        <NavLink to='/projekt' className='nav-link line drop'>Stora projekt</NavLink>
+                        <NavLink to='/produkter' className='nav-link drop'>Dagvatten- och granulatfilter</NavLink>
+                        <hr style={{ width: '100%' }} />
+                        <NavLink to='/projekt' className='nav-link drop'>Stora projekt</NavLink>
+                        <hr style={{ width: '100%' }} />
                         <NavLink to='/montage' className='nav-link drop'>Montage</NavLink>
                     </div>
                 </div>
