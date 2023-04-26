@@ -6,8 +6,10 @@ const Home = () => {
   return (
     <>
       <header className='hero'>
-        <h1>Välkommen till <br /> FlexiClean</h1>
-        <p>Idag rinner tusentals liter olja och tungmetaller rakt ut ur städerna i sällskap med regn- och smutsvatten från vägar och parkeringsplatser.  FlexiClean har tagit fram en filterhållaren som renar dagvattnet. </p>
+        <div className="hero-data">
+          <h1>Välkommen till <br /> FlexiClean</h1>
+          <p>Idag rinner tusentals liter olja och tungmetaller rakt ut ur städerna i sällskap med regn- och smutsvatten från vägar och parkeringsplatser.  FlexiClean har tagit fram en filterhållaren som renar dagvattnet. </p>
+        </div>
       </header>
 
 

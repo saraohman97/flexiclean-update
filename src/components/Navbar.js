@@ -8,46 +8,49 @@ const Navbar = () => {
 
     return (
         <nav>
-            <NavLink to='/'>
-                <img className='nav-logo' src={logo} alt="logotype flexiclean blue gray grey logo" />
-            </NavLink>
+            <div className="navbar-wrapper">
+                <NavLink to='/'>
+                    <img className='nav-logo' src={logo} alt="logotype flexiclean blue gray grey logo" />
+                </NavLink>
 
-            <div className="nav-links">
-                <div className='nav-link dropdown'>
-                    Produkter
-                    <AiOutlineDown />
-                    <div className="dropdown-content">
-                        <NavLink to='/produkter' className='nav-link drop'>Dagvatten- och granulatfilter</NavLink>
-                        <hr style={{ width: '100%' }} />
-                        <NavLink to='/projekt' className='nav-link drop'>Stora projekt</NavLink>
-                        <hr style={{ width: '100%' }} />
-                        <NavLink to='/montage' className='nav-link drop'>Montage</NavLink>
+                <div className="nav-links">
+                    <div className='nav-link dropdown'>
+                        Produkter
+                        <AiOutlineDown />
+                        <div className="dropdown-content">
+                            <NavLink to='/produkter' className='nav-link drop'>Dagvatten- och granulatfilter</NavLink>
+                            <hr style={{ width: '100%' }} />
+                            <NavLink to='/projekt' className='nav-link drop'>Stora projekt</NavLink>
+                            <hr style={{ width: '100%' }} />
+                            <NavLink to='/montage' className='nav-link drop'>Montage</NavLink>
+                        </div>
                     </div>
-                </div>
-                <NavLink to='/dokumentcenter' className='nav-link'>Documentcenter</NavLink>
-                <NavLink to='/kontakta-oss' className='nav-link'>Kontakta oss</NavLink>
-                <button className='btn btn-gray'>Beställ</button>
-            </div>
-
-            {/* ------Menu------- */}
-            {!menuOpen ? (
-                <div className="nav-link menu" onClick={() => setMenuOpen(true)}>
-                    <strong>Meny</strong>
-                </div>
-            ) : (
-                <div className="menu-content">
-                    <div className="btn-close" onClick={() => setMenuOpen(false)}> X</div>
-                    <div className='nav-link no'>Produkter</div>
-                    <div className='menu-df'>
-                        <Link to='/produkter' onClick={() => setMenuOpen(false)} className='nav-link'>Dagvatten- och <br /> granulatfilter</Link>
-                        <Link to='/projekt' onClick={() => setMenuOpen(false)} className='nav-link'>Stora projekt</Link>
-                        <Link to='/montage' onClick={() => setMenuOpen(false)} className='nav-link'>Montage</Link>
-                    </div>
-                    <Link to='/dokumentcenter' onClick={() => setMenuOpen(false)} className='nav-link'>Documentcenter</Link>
-                    <Link to='/kontakta-oss' onClick={() => setMenuOpen(false)} className='nav-link'>Kontakta oss</Link>
+                    <NavLink to='/dokumentcenter' className='nav-link'>Documentcenter</NavLink>
+                    <NavLink to='/kontakta-oss' className='nav-link'>Kontakta oss</NavLink>
                     <button className='btn btn-gray'>Beställ</button>
                 </div>
-            )}
+
+                {/* ------Menu------- */}
+                {!menuOpen ? (
+                    <div className="nav-link menu" onClick={() => setMenuOpen(true)}>
+                        <strong>Meny</strong>
+                    </div>
+                ) : (
+                    <div className="menu-content">
+                        <div className="btn-close" onClick={() => setMenuOpen(false)}> X</div>
+                        <Link to='/' onClick={() => setMenuOpen(false)} className='nav-link'>Hem</Link>
+                        {/* <div className='nav-link no'>Produkter</div> */}
+                        <div className='menu-df'>
+                            <Link to='/produkter' onClick={() => setMenuOpen(false)} className='nav-link'>Dagvatten- och <br /> granulatfilter</Link>
+                            <Link to='/projekt' onClick={() => setMenuOpen(false)} className='nav-link'>Stora projekt</Link>
+                            <Link to='/montage' onClick={() => setMenuOpen(false)} className='nav-link'>Montage</Link>
+                        </div>
+                        <Link to='/dokumentcenter' onClick={() => setMenuOpen(false)} className='nav-link'>Documentcenter</Link>
+                        <Link to='/kontakta-oss' onClick={() => setMenuOpen(false)} className='nav-link'>Kontakta oss</Link>
+                        <button className='btn btn-gray'>Beställ</button>
+                    </div>
+                )}
+            </div>
         </nav>
     )
 }

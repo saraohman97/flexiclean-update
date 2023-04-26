@@ -40,10 +40,7 @@ img {
 }
 .section {
   padding: 3rem 1rem;
-  /* display: flex;
-  flex-direction: column;
-  gap: 1rem; */
-  max-width: 1350px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -78,17 +75,22 @@ img {
 
 /* ---------Navbar----------- */
 nav {
-  height: 8vh;
-  min-height: 3rem;
+  background-color: white;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.046);
   position: sticky;
   z-index: 10000;
   top: 0;
-  background-color: white;
-
+  
+}
+.navbar-wrapper {
+  min-height: 3rem;
+  height: 8vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0 auto;
+  
+  max-width: 1100px;
 }
 .nav-link {
   padding: .5rem 0rem .5rem 1rem;
@@ -182,9 +184,10 @@ nav {
 
   padding: 45vh 1rem 1rem;
   color: var(--text-clr-light);
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+}
+.hero-data {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 .hero h1 {
   font-weight: 600;
@@ -306,10 +309,6 @@ nav {
   nav {
     padding-inline: 7rem;
   }
-  .section {
-    /* padding: 5rem 7rem; */
-    /* gap: 5rem; */
-  }
   .hero {
     padding: 45vh 7rem 1rem;
   }
@@ -346,7 +345,7 @@ nav {
 .showcase2 {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 5rem;
 }
 .showcase1-img img,
 .showcase2-img img {
@@ -380,8 +379,8 @@ nav {
 .bg-gray {
   position: absolute;
   z-index: -1;
-  width: 50%;
-  left: 0;
+  width: 65%;
+  left: -15rem;
   height: 100vh;
   background-color: var(--main-clr);
 }
@@ -395,7 +394,7 @@ nav {
 }
 .btn-report {
   flex: 1;
-  /* background-color: #E2E8EF; */
+  background-color: #E2E8EF;
   border-radius: 1rem;
   max-width: 15rem;
 }
@@ -404,7 +403,7 @@ nav {
   height: 10rem;
 }
 .btn-report p {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
   font-size: small;
   padding: .7rem;
   text-align: center;
@@ -428,10 +427,6 @@ nav {
     flex-direction: row;
     margin-bottom: 10rem;
   }
-  /* .showcase2-img {
-    display: flex;
-    justify-content: center;
-  } */
 }
 /* for big devices */
 @media screen and (min-width: 1024px) {
