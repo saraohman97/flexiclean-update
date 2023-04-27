@@ -4,6 +4,10 @@ import product_two from '../assets/product2.jpg'
 import kalmar from '../assets/kalmar.png'
 import vasteras from '../assets/vasteras.jpg'
 import img from '../assets/bg.jpg'
+import { Link } from 'react-router-dom'
+import part1 from '../assets/part1.jpg'
+import part2 from '../assets/part2.jpg'
+import part3 from '../assets/part3.jpg'
 
 const Products = () => {
   return (
@@ -15,7 +19,7 @@ const Products = () => {
         </div>
         <img src={img} className='products-hero-img' alt="" />
         <p className='products-hero-data'>FlexiClean är en ﬁlterhållare för rening av process- och dag-vatten. Produkten bygger på djup kunskap om dagvatten och dagvattenbrunnar och en förståelse för de utmaningar kommuner och privata aktörer ställs inför varje dag. FlexiClean är laddad med egenskaper som avsevärt förbättrar och förenklar arbetet med inspektion och underhåll av brunnen. Och den kan anpassas för rening i alla tänkbara miljöer.</p>
-        <button className='btn btn-gray btn-wrapper'>Läs mer</button>
+        <div className="btn-wrapper"><Link to='/dokumentcenter'><button className='btn btn-gray'>Läs mer</button></Link></div>
       </section>
 
       <section className='section showcase1'>
@@ -50,16 +54,40 @@ const Products = () => {
           <h1 className='showcase3-title'>Västerås Stad</h1>
           <p>Tidigare har Västerås Stad redovisade sina resultat efter tester av FlexiClean graulatfilter. Tillsammans med ett fantastiskt arbete av driftpersonalen på Västerås Stad och FlexiClean granulatfilter kunde man rapportera NOLL utsläpp av granulat i dagvattnet.<br /> <br />”Kalmar-rapporten” Sveriges första vetenskapliga studie av spridningen av mikroplast från en konstgräsplan är publicerad: Den potentiella mikroplastspridningen var 54.9 kg, allt utom 100 gram kunde stoppas med skötselåtgärder och 10,7 gram gummigranulat spreds till dagvattennätet.</p>
           <div className='showcase3-info'>
-            <div className="btn-report">
+            <a href='https://www.flexiclean.eu/Homepage/Download-File/f/1226420/h/bda295b64c67f79a461bf7332e640edd/RAPPORT+%2B+Mikroplastspridning+fr%C3%A5n+en+modernt+utformad+konstgr%C3%A4splan+med+skydds%C3%A5tg%C3%A4rder' className="btn-report">
               <img src={kalmar} alt="" />
               <p>Läs Kalmar-rapporten</p>
-            </div>
-            <div className="btn-report">
+            </a>
+            <a href='https://www.flexiclean.eu/Homepage/Download-File/f/1183421/h/1eebd9a8d8176c2b314ce13813cc886b/framtida_handtering_av_konstgr%C3%A4splaner_i_V%C3%A4ster%C3%A5s_stad' className="btn-report">
               <img src={vasteras} alt="" />
               <p>Läs Västerås-rapporten</p>
-            </div>
+            </a>
           </div>
         </div>
+      </section>
+
+      <section className='section showcase4'>
+        <h1 className='showcase4-title'>Filterkassettens uppbyggnad</h1>
+
+        <div className="showcase4-data">
+          <div className="showcase4-item">
+            <img src={part1} className='showcase4-img' alt="" />
+            <strong>Flterhållare för rening av process- och dag-vatten</strong>
+            <p>FlexiClean är en ﬁlterhållare för rening av process- och dag-vatten. Produkten bygger på djup kunskap om dagvatten och dagvattenbrunnar.</p>
+          </div>
+          <div className="showcase4-item">
+            <img className='showcase4-img' src={part2} alt="" />
+            <strong>Flterhållare för rening av process- och dag-vatten</strong>
+            <p>FlexiClean är en ﬁlterhållare för rening av process- och dag-vatten. Produkten bygger på djup kunskap om dagvatten och dagvattenbrunnar.</p>
+          </div>
+          <div className="showcase4-item">
+            <img className='showcase4-img' src={part3} alt="" />
+            <strong>Flterhållare för rening av process- och dag-vatten</strong>
+            <p>FlexiClean är en ﬁlterhållare för rening av process- och dag-vatten. Produkten bygger på djup kunskap om dagvatten och dagvattenbrunnar.</p>
+          </div>
+        </div>
+
+        <button className='btn btn-blue'>Kontakta oss för mer information</button>
       </section>
     </>
   )
