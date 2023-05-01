@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { useState } from 'react';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -32,6 +33,7 @@ function App() {
       </Routes>
 
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

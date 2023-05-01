@@ -1,11 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;300;400;600;700;800;900&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@300;400;500;600;700&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Ysabeau:wght@1;100;200;300;400;500;600;700;800;900;1000&display=swap');
-
-
 
 
 :root {
@@ -23,15 +16,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 html, 
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  /* font-family: 'Source Sans 3', sans-serif; */
-  /* font-family: 'Pontano Sans', sans-serif; */
-  /* font-family: 'Noto Sans Symbols', sans-serif; */
-  /* font-family: 'Montserrat', sans-serif; */
   /* font-family: 'Ysabeau', sans-serif; */
 }
 h1,
@@ -41,11 +29,9 @@ h4 {
   font-weight: 300;
 }
 p {
-  /* font-family: serif; */
   line-height: 25px;
   color: gray;
   font-size: 16px;
-  /* font-weight: 300; */
   font-family: 'Ysabeau', sans-serif;
 }
 a {
@@ -114,7 +100,6 @@ nav {
   z-index: 10000;
   top: 0;
   font-size: 15px;
-  /* font-weight: 600; */
   font-family: 'Ysabeau', sans-serif;
 }
 .navbar-wrapper {
@@ -125,7 +110,7 @@ nav {
   justify-content: space-between;
   margin: 0 auto;
   
-  max-width: 1100px;
+  max-width: 1300px;
 }
 .nav-link {
   padding-block: 1rem;
@@ -205,9 +190,6 @@ nav {
 .menu-df .nav-link {
   color: var(--third-clr);
 }
-/* .menu-df .nav-link:hover {
-  color: rgba(0, 0, 0, 0.4);
-} */
 
 
 
@@ -348,9 +330,6 @@ nav {
 
 /* for big devices */
 @media screen and (min-width: 1024px) {
-  nav {
-    padding-inline: 7rem;
-  }
   .hero {
     padding: 45vh 7rem 1rem;
   }
