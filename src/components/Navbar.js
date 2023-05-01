@@ -6,7 +6,7 @@ import PutOrder from './PutOrder';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false)
-    const [orderModalOpen, setOrderModalOpen] = useState(true)
+    const [orderModalOpen, setOrderModalOpen] = useState(false)
 
     const closeBtn = () => {
         setOrderModalOpen(true)
