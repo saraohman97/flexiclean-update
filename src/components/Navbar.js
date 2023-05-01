@@ -1,18 +1,9 @@
-import React, { useState } from 'react'
 import logo from '../assets/logo.png'
 import { Link, NavLink } from 'react-router-dom'
 import { AiOutlineDown } from "react-icons/ai";
 import PutOrder from './PutOrder';
 
-const Navbar = () => {
-    const [menuOpen, setMenuOpen] = useState(false)
-    const [orderModalOpen, setOrderModalOpen] = useState(false)
-
-    const closeBtn = () => {
-        setOrderModalOpen(true)
-        setMenuOpen(false)
-    }
-
+const Navbar = ({menuOpen, orderModalOpen, setOrderModalOpen, setMenuOpen, closeBtn }) => {
     return (
         <nav>
             <div className="navbar-wrapper">

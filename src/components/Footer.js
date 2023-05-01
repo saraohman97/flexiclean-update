@@ -6,7 +6,7 @@ import { AiFillYoutube } from "react-icons/ai";
 import Admin from './Admin.js'
 
 const Footer = () => {
-  const [showAdmin, setShowAdmin] = useState(true)
+  const [showAdmin, setShowAdmin] = useState(false)
 
   return (
     <div className='footer'>

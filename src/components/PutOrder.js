@@ -49,7 +49,7 @@ const PutOrder = ({ setOrderModalOpen }) => {
                                 </div>
                                 <div>
                                     <label htmlFor="text" className='order-label'>Meddelande</label> <br />
-                                    <textarea className='order-input-field input-group' cols="30" rows="5"></textarea>
+                                    <textarea className='order-input-field input-group' cols="30" rows="10"></textarea>
                                 </div>
                                 <button className='btn btn-blue' onClick={() => setNextView(true)}>Nästa</button>
                             </div>
@@ -72,7 +72,6 @@ const PutOrder = ({ setOrderModalOpen }) => {
                                     <label htmlFor="text" className='order-label'>Mobil nummer</label> <br />
                                     <input type="text" className='order-input-field' />
                                 </div>
-                                <button className='btn btn-gray' onClick={() => setNextView(false)}>Tillbaka</button>
                             </div>
                             <div className="order-form-right">
                                 <div className='input-group'>
@@ -87,7 +86,10 @@ const PutOrder = ({ setOrderModalOpen }) => {
                                     <label htmlFor="text" className='order-label'>Mobil nummer</label> <br />
                                     <input type="text" className='order-input-field' />
                                 </div>
-                                <button className='btn btn-blue' type='submit'>Lägg beställning</button>
+                                <div className="order-btn-wrapper">
+                                    <button className='btn btn-gray' onClick={() => setNextView(false)}>Tillbaka</button>
+                                    <button className='btn btn-blue' type='submit'>Lägg beställning</button>
+                                </div>
                             </div>
                         </>
                     )}

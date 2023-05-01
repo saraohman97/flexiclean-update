@@ -8,15 +8,23 @@ import Montage from './pages/Montage';
 import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import { useState } from 'react';
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [orderModalOpen, setOrderModalOpen] = useState(false)
+
+  const closeBtn = () => {
+      setOrderModalOpen(true)
+      setMenuOpen(false)
+  }
   return (
     <div className="App">
-      <Navbar />
+      <Navbar orderModalOpen={orderModalOpen} menuOpen={menuOpen} setOrderModalOpen={setOrderModalOpen} setMenuOpen={setMenuOpen} closeBtn={closeBtn} />
       
       <Routes>
         <Route path='/' element={ <Home /> } />
-        <Route path='/produkter' element={ <Products /> } />
+        <Route path='/produkter' element={ <Products setOrderModalOpen={setOrderModalOpen} /> } />
         <Route path='/dokumentcenter' element={ <Documents /> } />
         <Route path='/projekt' element={ <Projects /> } />
         <Route path='/montage' element={ <Montage /> } />

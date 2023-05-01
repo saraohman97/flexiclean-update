@@ -9,7 +9,7 @@ import part1 from '../assets/part1.jpg'
 import part2 from '../assets/part2.jpg'
 import part3 from '../assets/part3.jpg'
 
-const Products = () => {
+const Products = ({ setOrderModalOpen }) => {
   return (
     <>
       <section className='section products-hero'>
@@ -30,7 +30,7 @@ const Products = () => {
           <p><strong>FlexiClean är filterkassett för rening av dagvatten passar i brunnar med innerdiameter 350 - 1000 mm. filtret renar tungmetaller, näringsämnen, oljor PAH och Pfas.</strong> <br />Kassetten flödar 160 l/min filtrerat vatten och är försedd med en bypassfunktion vid höga flöden. Filterpåsen som består av en blandning av furubark och träflis byts normalt en gång per år.<br /><br />Att tänka på. FlexiClean  kräver minst 800mm/1000 djup i brunnen och med slät innersida på brunnen. Teleskopbeteckning kan försvåra montaget. Tänk dessutom på att ”hålet” i beteckningen måste vara ca 300mm i diameter”.</p>
           <div className='btn-wrapper'>
             <button className='btn btn-gray'>Se storlekar</button>
-            <button className='btn btn-blue'>Beställ</button>
+            <button className='btn btn-blue' onClick={() => setOrderModalOpen(true)}>Beställ</button>
           </div>
         </div>
       </section>
@@ -44,7 +44,7 @@ const Products = () => {
           <p><strong>FlexiClean är filterkassett för rening av dagvatten passar i brunnar med innerdiameter 350 - 1000 mm. filtret renar tungmetaller, näringsämnen, oljor PAH och Pfas.</strong> <br />Kassetten flödar 160 l/min filtrerat vatten och är försedd med en bypassfunktion vid höga flöden. Filterpåsen som består av en blandning av furubark och träflis byts normalt en gång per år.<br /><br />Att tänka på. FlexiClean  kräver minst 800mm/1000 djup i brunnen och med slät innersida på brunnen. Teleskopbeteckning kan försvåra montaget. Tänk dessutom på att ”hålet” i beteckningen måste vara ca 300mm i diameter”.</p>
           <div className='btn-wrapper'>
             <button className='btn btn-gray'>Se storlekar</button>
-            <button className='btn btn-blue'>Beställ</button>
+            <button className='btn btn-blue' onClick={() => setOrderModalOpen(true)}>Beställ</button>
           </div>
         </div>
       </section>
@@ -86,8 +86,7 @@ const Products = () => {
             <p>FlexiClean är en ﬁlterhållare för rening av process- och dag-vatten. Produkten bygger på djup kunskap om dagvatten och dagvattenbrunnar.</p>
           </div>
         </div>
-
-        <button className='btn btn-blue'>Kontakta oss för mer information</button>
+        <div className="btn-wrapper"><Link to='/kontakta-oss'><button className='btn btn-blue'>Kontakta oss för mer information</button></Link></div>
       </section>
     </>
   )
