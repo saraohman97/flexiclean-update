@@ -8,6 +8,7 @@ import Montage from './pages/Montage';
 import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import PutOrder from './components/PutOrder';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/projekt' element={ <Projects /> } />
         <Route path='/montage' element={ <Montage /> } />
         <Route path='/kontakta-oss' element={ <Contact /> } />
+        <Route path='/put-order' element={ <PutOrder /> } />
       </Routes>
 
       <Footer />
