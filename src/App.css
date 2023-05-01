@@ -58,9 +58,15 @@ img {
   background-color: #E2E8EF;
   color: var(--third-clr);
 }
+.btn-gray:hover {
+  background-color: #cadcf0;
+}
 .btn-blue {
   background-color: var(--second-clr);
   color: var(--text-clr-light);
+}
+.btn-blue:hover {
+  background-color: #278cb8;
 }
 .btn-close {
   cursor: pointer;
@@ -853,9 +859,14 @@ display: none;
   resize: none;
   width: 100%;
   max-width: 400px;
+  background-color: #f8f8f84d;
+}
+.order-input-field:hover {
+  border: 1px solid transparent;
 }
 .order-input-field:focus {
-  border: 1px solid var(--third-clr);
+  /* border: 1px solid var(--third-clr); */
+  border: 1px solid transparent;
   background-color: var(--main-clr);
 } 
 .order-size-inputs {
