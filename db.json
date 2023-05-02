@@ -41,14 +41,17 @@
       "message": "Filterbyten, IVL rapport. Mässor"
     }
   ],
-  "comments": [
+  "messages": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "",
+      "mobile": "",
+      "subject": "",
+      "message": ""
     }
   ],
-  "profile": {
-    "name": "typicode"
+  "user": {
+    "name": "Admin1",
+    "password": "BytMig123"
   }
 }

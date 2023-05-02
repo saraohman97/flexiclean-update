@@ -4,13 +4,9 @@ import axios from 'axios';
 import Article from '../components/Article'
 
 const Home = () => {
-  const { isLoading, data } = useQuery('posts', () => {
+  const { isLoading, data, isError, error } = useQuery('posts', () => {
     return axios.get('http://localhost:8000/posts')
   })
-
-  if(isLoading) {
-    return <h2>Loading....</h2>
-  }
 
   return (
     <>
@@ -35,6 +31,12 @@ const Home = () => {
           {data?.data.map((post) => {
             return <Article key={post.id} post={post} />
           })}
+          {isLoading && (
+            <h2 className='mt-2'>Loading....</h2>
+          )}
+          {isError && (
+            <h2 className='mt-2'>{error.message}</h2>
+          )}
         </aside>
       </section>
     </>
