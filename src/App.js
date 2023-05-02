@@ -11,30 +11,44 @@ import Footer from './components/Footer';
 import { useState } from 'react';
 import ScrollToTop from './components/ScrollToTop';
 
+import {
+  QueryClient,
+  QueryClientProvider,
+} from 'react-query'
+import { ReactQueryDevtools } from 'react-query/devtools'
+
+
+const queryClient = new QueryClient()
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [orderModalOpen, setOrderModalOpen] = useState(false)
 
   const closeBtn = () => {
-      setOrderModalOpen(true)
-      setMenuOpen(false)
+    setOrderModalOpen(true)
+    setMenuOpen(false)
   }
   return (
-    <div className="App">
-      <Navbar orderModalOpen={orderModalOpen} menuOpen={menuOpen} setOrderModalOpen={setOrderModalOpen} setMenuOpen={setMenuOpen} closeBtn={closeBtn} />
-      
-      <Routes>
-        <Route path='/' element={ <Home /> } />
-        <Route path='/produkter' element={ <Products setOrderModalOpen={setOrderModalOpen} /> } />
-        <Route path='/dokumentcenter' element={ <Documents /> } />
-        <Route path='/projekt' element={ <Projects /> } />
-        <Route path='/montage' element={ <Montage /> } />
-        <Route path='/kontakta-oss' element={ <Contact /> } />
-      </Routes>
+    <QueryClientProvider client={queryClient}>
+      <div className="App">
 
-      <Footer />
+        <Navbar orderModalOpen={orderModalOpen} menuOpen={menuOpen} setOrderModalOpen={setOrderModalOpen} setMenuOpen={setMenuOpen} closeBtn={closeBtn} />
+
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/produkter' element={<Products setOrderModalOpen={setOrderModalOpen} />} />
+          <Route path='/dokumentcenter' element={<Documents />} />
+          <Route path='/projekt' element={<Projects />} />
+          <Route path='/montage' element={<Montage />} />
+          <Route path='/kontakta-oss' element={<Contact />} />
+        </Routes>
+
+        <Footer />
+
+      </div>
       <ScrollToTop />
-    </div>
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
   );
 }
 

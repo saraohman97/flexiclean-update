@@ -1,8 +1,17 @@
-import React from 'react'
 import img from '../assets/28712055-9XX6s.jpg'
-import newsimg from '../assets/97260328-LvYpp.jpg'
+import { useQuery } from 'react-query'
+import axios from 'axios';
+import Article from '../components/Article'
 
 const Home = () => {
+  const { isLoading, data } = useQuery('posts', () => {
+    return axios.get('http://localhost:8000/posts')
+  })
+
+  if(isLoading) {
+    return <h2>Loading....</h2>
+  }
+
   return (
     <>
       <header className='hero'>
@@ -22,26 +31,10 @@ const Home = () => {
 
         <aside className="home-sidebar">
           <h3 className='home-sidebar-title'>Nyheter</h3>
-          <div className="sidebar-item">
-            <img src={newsimg} alt="" />
-            <small className='sidebar-date'>15 april, 2023</small>
-            <h3 className='sidebar-header'>Nyhetsmail Vår</h3>
-            <p>Idag rinner tusentals liter olja och tungmetaller rakt ut ur städerna i sällskap med regn- och smutsvatten från vägar och parkeringsplatser.  FlexiClean har tagit fram en filterhållaren som renar dagvattnet. </p>
-          </div>
-
-          <div className="sidebar-item">
-            <img src={newsimg} alt="" />
-            <small className='sidebar-date'>15 april, 2023</small>
-            <h3 className='sidebar-header'>Nyhetsmail Vår</h3>
-            <p>Idag rinner tusentals liter olja och tungmetaller rakt ut ur städerna i sällskap med regn- och smutsvatten från vägar och parkeringsplatser.  FlexiClean har tagit fram en filterhållaren som renar dagvattnet. </p>
-          </div>
-
-          <div className="sidebar-item">
-            <img src={newsimg} alt="" />
-            <small className='sidebar-date'>15 april, 2023</small>
-            <h3 className='sidebar-header'>Nyhetsmail Vår</h3>
-            <p>Idag rinner tusentals liter olja och tungmetaller rakt ut ur städerna i sällskap med regn- och smutsvatten från vägar och parkeringsplatser.  FlexiClean har tagit fram en filterhållaren som renar dagvattnet. </p>
-          </div>
+          
+          {data?.data.map((post) => {
+            return <Article key={post.id} post={post} />
+          })}
         </aside>
       </section>
     </>
