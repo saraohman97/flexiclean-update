@@ -12,13 +12,12 @@ const Contact = () => {
   const [mobile, setMobile] = useState('')
   const [subject, setSubject] = useState('')
   const [body, setBody] = useState('')
+  const [error, setError] = useState(false)
+
+  const errorMessage = 'Can\'t be empty'
+
 
   const queryClient = useQueryClient()
-
-
-//   const {data: addPost} = useQuery('posts', () => {
-//     return axios.post('http://localhost:8000/posts')
-// })
 
   const addPostMutation = useMutation(addPost, {
     onSuccess: () => {
@@ -26,14 +25,10 @@ const Contact = () => {
     }
   })
 
-
   const handleSubmit = e => {
     e.preventDefault()
     addPostMutation.mutate({ name, mobile, subject, body })
-    setName('')
-    setMobile('')
-    setSubject('')
-    setBody('')
+    setName(''); setMobile(''); setSubject(''); setBody('')
   }
 
   return (
@@ -42,7 +37,12 @@ const Contact = () => {
         <h1 className='contact-title'>Kontakta oss</h1>
         <div>
           <label htmlFor="name" className='contact-label'>Fullständigt namn</label> <br />
-          <input value={name} onChange={(e) => setName(e.target.value)} type="text" className='contact-input-field' />
+          <input
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            type="text"
+            className='contact-input-field'
+          />
         </div>
 
         <div>

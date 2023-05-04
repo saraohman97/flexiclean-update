@@ -33,7 +33,6 @@ function App() {
       <div className="App">
 
         <Navbar orderModalOpen={orderModalOpen} menuOpen={menuOpen} setOrderModalOpen={setOrderModalOpen} setMenuOpen={setMenuOpen} closeBtn={closeBtn} />
-
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/produkter' element={<Products setOrderModalOpen={setOrderModalOpen} />} />

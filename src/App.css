@@ -10,7 +10,7 @@
   --second-clr: #00A0E6;
   --third-clr: #205065;
 
-  --box-shadow: 0 3px 6px rgba(0, 0, 0, 0.078);
+  --box-shadow: 0 3px 6px rgba(0, 0, 0, 0.278);
 }
 * {
   margin: 0;
@@ -94,8 +94,7 @@ img {
 
 /* ---------Navbar----------- */
 nav {
-  background-color: white;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.046);
+  background-color: whitesmoke;
   position: sticky;
   z-index: 10000;
   top: 0;
@@ -117,6 +116,7 @@ nav {
   margin-inline: 1rem;
   width: fit-content;
   border-bottom: 1px solid transparent;
+  font-weight: 700;
 }
 .nav-link:hover {
   cursor: pointer;
@@ -143,7 +143,7 @@ nav {
   background-color: white;
   width: 11rem;
   z-index: 20;
-  top: 2.1rem;
+  top: 2.9rem;
   right: 0;
 
   box-shadow: var(--box-shadow);
@@ -832,6 +832,7 @@ display: none;
 /* ---------put-order modal----------- */
 .order-content {
   background-color: whitesmoke;
+  /* backdrop-filter: blur(100px); */
   height: 100vh;
   position: absolute;
   z-index: 100;
@@ -997,4 +998,83 @@ display: none;
 
 .mt-2 {
   margin-top: 2rem;
+}
+
+
+
+
+/* ---------document page----------- */
+.document-title, 
+.document-subtitle {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.document-subtitle {
+  padding-bottom: 2rem;
+}
+.document-title {
+  margin-bottom: 2rem;
+}
+.document-img {
+  margin-bottom: 2rem;
+}
+.document-item {
+  margin-block: 2rem;
+  padding: .5rem .5rem 2rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column-reverse;
+  box-shadow: var(--box-shadow);
+  transition: all 0.5s;
+  outline: 1px solid white;
+}
+.document-item:hover {
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+  outline: 5px solid white;
+}
+.document-item-title {
+  margin-block: 1rem;
+}
+.document-item button {
+  margin-top: 1rem;
+}
+.document-item img {
+  height: 5rem;
+  width: fit-content;
+}
+
+/* for small devices */
+@media screen and (max-width: 350px) {
+  
+}
+/* for medium devices */
+@media screen and (min-width: 568px) {
+  
+}
+@media screen and (min-width: 750px) {
+  .document-title {
+    margin-top: 2rem;
+  }
+  .document-img {
+    padding-block: 3rem;
+  }
+  .document-item {
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+  }
+  .document-item img {
+    object-fit: contain;
+    height: 10rem;
+    flex: 1;
+    max-width: 250px;
+  }
+  .document-item-text {
+    flex: 3;
+  }
+}
+/* for big devices */
+@media screen and (min-width: 1024px) {
+  
 }

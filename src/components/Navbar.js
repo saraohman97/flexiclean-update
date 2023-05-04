@@ -14,9 +14,9 @@ const Navbar = ({menuOpen, orderModalOpen, setOrderModalOpen, setMenuOpen, close
                         <AiOutlineDown />
                         <div className="dropdown-content">
                             <NavLink to='/produkter' className='nav-link drop'>Dagvatten- och granulatfilter</NavLink>
-                            <hr style={{ width: '100%', border: '1px solid #F8F7F7' }} />
+                            <hr style={{ width: '100%', border: '1px solid rgb(239, 239, 239)' }} />
                             <NavLink to='/projekt' className='nav-link drop'>Stora projekt</NavLink>
-                            <hr style={{ width: '100%', border: '1px solid #F8F7F7' }} />
+                            <hr style={{ width: '100%', border: '1px solid rgb(239, 239, 239)' }} />
                             <NavLink to='/montage' className='nav-link drop'>Montage</NavLink>
                         </div>
                     </div>

@@ -17,7 +17,6 @@ const Home = () => {
         </div>
       </header>
 
-
       <section className='section home'>
         <main className="home-main">
           <h1>Västmanlands miljö- och <br /> klimatpris 2019</h1>
@@ -27,7 +26,7 @@ const Home = () => {
 
         <aside className="home-sidebar">
           <h3 className='home-sidebar-title'>Nyheter</h3>
-          
+
           {data?.data.map((post) => {
             return <Article key={post.id} post={post} />
           })}
