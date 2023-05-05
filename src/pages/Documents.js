@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../assets/bg.jpg'
+import headerImg from '../assets/document.jpg'
 
 const Documents = () => {
   return (
@@ -7,9 +7,8 @@ const Documents = () => {
       <h1 className='document-title'>Dokumentcenter</h1>
       <p className='document-subtitle'>Här publicerar vi fortlöpande tester utförda på FlexiClean. Redan för 14 år sedan blev vi tipsade om att använda bark som filtermaterial. De senare åren av forskning visar att vi valt rätt. Ladda gärna ned rapporterna nedan.</p>
 
-      <img src={img} className='document-img' alt="" />
+      <img src={headerImg} className='document-img' alt="flexiclean samarbetar med rent dagvatten på mässa" />
       <p className='document-subtitle'>Det finns inga önskebrunnar. Men väl en lyckosam lösning.</p>
-
 
       <div className="document-data">
         <div className="document-item">
@@ -20,7 +19,7 @@ const Documents = () => {
               <button className='btn btn-gray'>Ladda ner hela uppsatsen</button>
             </a>
           </div>
-          <img src="https://dst15js82dk7j.cloudfront.net/252829/97260241-tJLrg.jpg" alt="" />
+          <img src="https://dst15js82dk7j.cloudfront.net/252829/97260241-tJLrg.jpg" alt="Installation av filter, provtagning och analys av dagvatten. IVL, november 2021" />
         </div>
 
         <div className="document-item">
@@ -28,22 +27,11 @@ const Documents = () => {
             <h3 className='document-item-title'>Components for area-efficient
               stormwater treatment systems, Luleå Tekniska universitet, 2021</h3>
             <p>Components for area-efficient stormwater treatment systems Ivan Milovanović Urban Water Engineering, Luleå Tekniska universitet 2021. LTU gjorde under 2020-2021 tester på filtermaterial.</p>
-            <a href="https://www.flexiclean.eu/Homepage/Download-File/f/1299629/h/f884472b5a419dc81ddf19259af63d50/FULLTEXT03_LTU%2BBark">
+            <a href="https://dst15js82dk7j.cloudfront.net/252829/97260234-B1XER.png">
               <button className='btn btn-gray'>Ladda ner hela uppsatsen</button>
             </a>
           </div>
-          <img src="https://dst15js82dk7j.cloudfront.net/252829/97260234-B1XER.png" alt="" />
-        </div>
-
-        <div className="document-item">
-          <div className="document-item-text">
-            <h3 className='document-item-title'>Utvärdering av filtermaterial för att avlägsna lösta organiska föroreningar i dagvatten, Chalmers tekniska högskola, 2019</h3>
-            <p>Components for area-efficient stormwater treatment systems Ivan Milovanović Urban Water Engineering, Luleå Tekniska universitet 2021. LTU gjorde under 2020-2021 tester på filtermaterial.</p>
-            <a href="https://www.flexiclean.eu/Homepage/Download-File/f/1299629/h/f884472b5a419dc81ddf19259af63d50/FULLTEXT03_LTU%2BBark">
-              <button className='btn btn-gray'>Ladda ner hela uppsatsen</button>
-            </a>
-          </div>
-          <img src="https://dst15js82dk7j.cloudfront.net/252829/97260234-B1XER.png" alt="" />
+          <img src="https://dst15js82dk7j.cloudfront.net/252829/97260234-B1XER.png" alt="Components for area-efficient stormwater treatment systems, Luleå Tekniska universitet, 2021" />
         </div>
 
         <div className="document-item">
@@ -66,7 +54,7 @@ const Documents = () => {
               <button className='btn btn-gray'>Ladda ner hela uppsatsen</button>
             </a>
           </div>
-          <img src="https://www.cesaer.org/img-cache/25a04vwvn7-chalmers_-v.43ad610a.png" alt="" />
+          <img src="https://www.cesaer.org/img-cache/25a04vwvn7-chalmers_-v.43ad610a.png" alt="Utvärdering av filtermaterial för att avlägsna lösta organiska föroreningar i dagvatten, Chalmers tekniska högskola, 2019" />
         </div>
 
         <div className="document-item">
@@ -84,7 +72,7 @@ const Documents = () => {
               <button className='btn btn-gray'>Ladda ner hela uppsatsen</button>
             </a>
           </div>
-          <img src="https://www.svenskfotboll.se/48fcb2/globalassets/svff/bilderblock/logotyper/distriktsemblem/svff.svg" alt="" />
+          <img src="https://www.svenskfotboll.se/48fcb2/globalassets/svff/bilderblock/logotyper/distriktsemblem/svff.svg" alt="Rekommendationer för anläggning av konstgräsplaner, Svenska Fotbollsförbundet, april 2017" />
         </div>
 
         <div className="document-item">
@@ -103,18 +91,18 @@ const Documents = () => {
               <button className='btn btn-gray'>Ladda ner hela uppsatsen</button>
             </a>
           </div>
-          <img src="https://dst15js82dk7j.cloudfront.net/252829/71095419-sBi5t.png" alt="" />
+          <img src="https://dst15js82dk7j.cloudfront.net/252829/71095419-sBi5t.png" alt="Dagvatten utvärdering filter, Provtagning Dagvatten Göteborg, december 2016" />
         </div>
 
         <div className="document-item">
           <div className="document-item-text">
-            <h3 className='document-item-title'>Utbyte av filterkassetter, WSP, 2015-2016.</h3>
+            <h3 className='document-item-title'>Utbyte av filterkassetter, WSP, 2015-2016</h3>
             <p>Ett återvinningsföretag i Västerås ville byta ut sina filterkasetter av typen ”hänger i gallret” mot FlexiClean. WSP utförde tester och resultaten efter bytet visar att reningseffekten fördubblades.</p>
             <a href="https://www.flexiclean.eu/Homepage/Download-File/f/977205/h/cde5c898e3fb8217ba61f91430955a2d/WSP+prover+V%C3%A4ster%C3%A5s+2016_j%C3%A4mf%C3%B6relse">
               <button className='btn btn-gray'>Ladda ner hela uppsatsen</button>
             </a>
           </div>
-          <img src="https://h24-original.s3.amazonaws.com/252829/24431606-BnUYw.png" alt="" />
+          <img src="https://h24-original.s3.amazonaws.com/252829/24431606-BnUYw.png" alt="Utbyte av filterkassetter, WSP, 2015-2016" />
         </div>
 
         <div className="document-item">
@@ -135,12 +123,12 @@ const Documents = () => {
               <button className='btn btn-gray'>Ladda ner hela uppsatsen</button>
             </a>
           </div>
-          <img src="https://h24-original.s3.amazonaws.com/252829/24431623-FE0kl.png" alt="" />
+          <img src="https://h24-original.s3.amazonaws.com/252829/24431623-FE0kl.png" alt="Kinetic sorption modelling of Cu, Ni, Zn, Pb and Cr ions to pine bark and blast furnace slag by using batch experiments, Mälardagens högskola, 2008" />
         </div>
 
         <div className="document-item">
           <div className="document-item-text">
-            <h3 className='document-item-title'>Provning av filter till dagvattenbrunn</h3>
+            <h3 className='document-item-title'>Provning av filter till dagvattenbrunn, SP Sveriges Provnings- och Forskningsinstitut AB, 2004</h3>
             <p>
               SP har på uppdrag av Aros Rör & Svets provat Flexi-Clean 400 filterkassett för
               dagvattenbrunnar med avseende på fl ödeskapacitet. Dagvattenbrulnen har kopplats samman med SPs flödesrigg for vattenfiirsörjning och
@@ -151,7 +139,7 @@ const Documents = () => {
               <button className='btn btn-gray'>Ladda ner hela uppsatsen</button>
             </a>
           </div>
-          <img src="https://dst15js82dk7j.cloudfront.net/252829/71109976-Te4hm.png" alt="" />
+          <img src="https://dst15js82dk7j.cloudfront.net/252829/71109976-Te4hm.png" alt="Provning av filter till dagvattenbrunn, SP Sveriges Provnings- och Forskningsinstitut AB, 2004" />
         </div>
 
         <div className="document-item">
@@ -168,7 +156,7 @@ const Documents = () => {
               <button className='btn btn-gray'>Ladda ner hela uppsatsen</button>
             </a>
           </div>
-          <img src="https://dst15js82dk7j.cloudfront.net/252829/71110015-0BbhN.png" alt="" />
+          <img src="https://dst15js82dk7j.cloudfront.net/252829/71110015-0BbhN.png" alt="PM - Kontrollprovtagning dagvattenrening, Munktellstaden Eskilstuna, Structor Miljöteknik, 2009" />
         </div>
 
       </div>

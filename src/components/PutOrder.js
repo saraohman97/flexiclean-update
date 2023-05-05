@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import logo from '../assets/logo.png'
 
 const PutOrder = ({ setOrderModalOpen }) => {
     const [nextView, setNextView] = useState(false)
@@ -6,7 +7,12 @@ const PutOrder = ({ setOrderModalOpen }) => {
     return (
         <form>
             <div className='order-content'>
-                <button className="btn-close" onClick={() => setOrderModalOpen(false)}>X</button>
+                <div className="order-header">
+                    <div>
+                        <img className='nav-logo' src={logo} alt="logotype flexiclean blue gray grey logo" />
+                    </div>
+                    <button className="btn-close" onClick={() => setOrderModalOpen(false)}>X</button>
+                </div>
 
                 <div className="order-form">
                     {!nextView && (
@@ -14,7 +20,7 @@ const PutOrder = ({ setOrderModalOpen }) => {
                             <div className="order-form-left">
                                 <h1 className='order-title'>Beställning</h1>
                                 <div className='input-group'>
-                                    <label htmlFor="text" className='order-label'>Fullständigt namn</label> 
+                                    <label htmlFor="text" className='order-label'>Fullständigt namn</label>
                                     <input type="text" className='order-input-field' />
                                 </div>
                                 <div className='input-group'>
@@ -38,7 +44,7 @@ const PutOrder = ({ setOrderModalOpen }) => {
                             </div>
                             <div className="order-form-right">
                                 <div className='input-group'>
-                                    <label htmlFor="text" className='order-label'>Kassett eller filter typ</label> 
+                                    <label htmlFor="text" className='order-label'>Kassett eller filter typ</label>
                                     <select className='order-input-field'>
                                         <option value="default">Välj</option>
                                         <option value="kassett 1">Kassett 1</option>
@@ -61,7 +67,7 @@ const PutOrder = ({ setOrderModalOpen }) => {
                             <div className="order-form-left">
                                 <h1 className='order-title'>Beställning</h1>
                                 <div className='input-group'>
-                                    <label htmlFor="text" className='order-label'>Fullständigt namn</label> 
+                                    <label htmlFor="text" className='order-label'>Fullständigt namn</label>
                                     <input type="text" className='order-input-field' />
                                 </div>
                                 <div className='input-group'>
@@ -75,7 +81,7 @@ const PutOrder = ({ setOrderModalOpen }) => {
                             </div>
                             <div className="order-form-right">
                                 <div className='input-group'>
-                                    <label htmlFor="text" className='order-label'>Fullständigt namn</label> 
+                                    <label htmlFor="text" className='order-label'>Fullständigt namn</label>
                                     <input type="text" className='order-input-field' />
                                 </div>
                                 <div className='input-group'>

@@ -104,12 +104,11 @@ nav {
 .navbar-wrapper {
   min-height: 3rem;
   height: 10vh;
+  max-width: 1300px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
-  
-  max-width: 1300px;
 }
 .nav-link {
   padding-block: 1rem;
@@ -124,6 +123,7 @@ nav {
 }
 .nav-logo {
   height: 2.5rem;
+  object-fit: contain;
 }
 .nav-links {
   display: none;
@@ -296,9 +296,6 @@ nav {
 @media screen and (max-width: 350px) {
   .footer-links {
     flex-direction: column;
-  }
-  .nav-logo {
-    height: 2rem;
   }
 }
 
@@ -844,6 +841,11 @@ display: none;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
+}
+.order-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .order-title {
   margin-bottom: 1rem;

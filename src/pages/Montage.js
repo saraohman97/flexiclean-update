@@ -38,7 +38,7 @@ const Montage = () => {
 
           <div className="montage-suggestion-videos">
             <div className="montage-videos-item" onClick={toggleSwitchVideo}>
-              <img src={!switchVideo ? video : video2} className='montage-video' alt="" />
+              <img src={!switchVideo ? video : video2} className='montage-video' alt="flexiclean drift- och skötselanvisning" />
               <h4 className='montage-title'>{switchVideo ? 'Installation.wmv' : 'Filterbyte.wmv'}</h4>
             </div>
             <a href='https://www.flexiclean.eu/Homepage/Download-File/f/977202/h/4ec555ee46f78678e4a7b7418b1dfd18/FlexiClean_driftochunderh%C3%A5ll' className="montage-videos-item">

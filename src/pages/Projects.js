@@ -14,7 +14,7 @@ const Projects = () => {
           <h1 className='projects-hero-title'>Minnesvärda projekt</h1>
           <p className='projects-hero-subtitle'>Upptäck vårt utbud av kassetter</p>
         </div>
-        <img src={img} className='projects-hero-img' alt="" />
+        <img src={img} className='projects-hero-img' alt="flexiclean monterar filtervägg i skärgården" />
       </section>
 
       <section className='section projects-intro'>
@@ -24,7 +24,7 @@ const Projects = () => {
 
       <section className='section projects'>
         <div className="single-project">
-          <div className="project-img"><img src={ovako} alt="" /></div>
+          <div className="project-img"><img src={ovako} alt="Samlingsbrunn för Ovako Steels dagvattensystem" /></div>
           <div className="project-data">
             <h1 className='project-title'>Ovako Steel Hofors</h1>
             <p className='project-subtitle'><strong>Samlingsbrunn för Ovako Steels dagvattensystem</strong></p>
@@ -32,7 +32,7 @@ const Projects = () => {
           </div>
         </div>
         <div className="single-project reverse">
-          <div className="project-img"><img src={eskiltuna} alt="" /></div>
+          <div className="project-img"><img src={eskiltuna} alt="bilhall i Eskilstuna problem med mystiskt oljeutsläpp" /></div>
           <div className="project-data">
             <h1 className='project-title'>Bilhall i Eskilstuna</h1>
             <p className='project-subtitle'><strong>Problem med mystiskt oljeutsläpp</strong></p>
@@ -48,13 +48,13 @@ const Projects = () => {
 
       <section className='section showcase5'>
         <div className="showcase5-item">
-          <img src={project3} className='showcase5-img' alt="" />
+          <img src={project3} className='showcase5-img' alt="flexiClean filterväggar för dagvattenrening" />
           <h1 className='showcase5-title'>FlexiClean filterväggar för dagvattenrening</h1>
           <p>FlexiClean filterväggar för rening av dagvatten. Filtret renar tungmetaller, näringsämnen, oljor PAH och Pfas. Och är godkänd som oljeavskiljare på parkeringsplatser. Flödet beror på hur många kassetter man använder.Filtren är försedda med en bypassfunktion vid höga flöden. Filterpåsen som består av en blandning av furubark och träflis byts normalt en gång per år.</p>
           <div className="btn-wrapper"><Link to='/kontakta-oss'><button className='btn btn-gray'>Ta kontakt</button></Link></div>
         </div>
         <div className="showcase5-item">
-          <img src={project2} className='showcase5-img' alt="" />
+          <img src={project2} className='showcase5-img' alt="flexiClean filterbrunnar för dagvattenrening" />
           <h1 className='showcase5-title'>FlexiClean filterbrunnar för dagvattenrening</h1>
           <p>FlexiClean filterbrunnar för rening av dagvatten. Dessa är för permanent placering men kan även användas mobilt. Filtret renar tungmetaller, näringsämnen, oljor PAH och Pfas. Filterbrunnen är fördelad på en sedimenteringsdel samt en filtreringsdel . Filterbrunnen flödar 320-640 l/min filtrerat vatten beroende på dimension Filtren är försedda med en bypassfunktion vid höga flöden. Filterpåsen som består av en blandning av furubark och träflis byts normalt en gång per år.</p>
           <div className="btn-wrapper">
