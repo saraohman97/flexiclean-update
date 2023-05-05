@@ -831,8 +831,11 @@ display: none;
 
 /* ---------put-order modal----------- */
 .order-content {
-  background-color: whitesmoke;
-  /* backdrop-filter: blur(100px); */
+  background-image: url(./assets/layered-waves-haikei\ \(1\).svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
   height: 100vh;
   position: absolute;
   z-index: 100;
@@ -844,6 +847,7 @@ display: none;
 }
 .order-title {
   margin-bottom: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .order-form {
   display: flex;
@@ -851,14 +855,21 @@ display: none;
   min-width: 400px;
   margin: 0 auto;
 }
+.order-content .input-group {
+  position: relative;
+}
 .order-label {
-  color: var(--third-clr);
-  font-size: small;
+  color: gray;
+  font-size: 12px;
+  position: absolute;
+  top: .5rem;
+  left: 1rem;
 }
 .order-input-field {
   margin-bottom: 1rem;
-  margin-top: .5rem;
-  padding: .5rem 1rem;
+  color: #000000;
+  padding: 2rem 1rem .8rem;
+  text-align: bottom;
   border-radius: 5px;
   border: 1px solid lightgray;
   outline: none;
@@ -868,7 +879,8 @@ display: none;
   max-width: 400px;
 }
 .order-input-field:hover {
-  border: 1px solid transparent;
+  /* border: 1px solid gray; */
+  box-shadow: var(--box-shadow);
 }
 .order-input-field:focus {
   border: 1px solid var(--third-clr);
@@ -880,7 +892,6 @@ display: none;
 }
 .order-size {
   display: flex;
-  gap: .5rem;
   align-items: center;
   flex: 1;
 }
@@ -918,14 +929,14 @@ display: none;
     gap: 1rem;
   }
   .order-form-right {
-    margin-top: 5rem;
-  }
-  .order-input-field {
-    margin-bottom: 2rem;
+    margin-top: 4.2rem;
   }
   .order-form-right,
   .order-form-left {
     width: 400px;
+  }
+  .order-content {
+    background-position: bottom;
   }
 }
 /* for big devices */
@@ -955,7 +966,7 @@ display: none;
   max-width: 300px;
   margin: 0 auto;
 }
-.input-group {
+.admin-content .input-group {
   width: 100%;
 }
 .admin-title {
