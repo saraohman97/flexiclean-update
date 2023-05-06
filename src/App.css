@@ -803,6 +803,7 @@ display: none;
   }
   .contact-img {
     height: auto;
+    max-height: 30rem;
   }
   .contact-info {
     gap: 2rem;
@@ -857,17 +858,17 @@ display: none;
   min-width: 400px;
   margin: 0 auto;
 }
-.order-content .input-group {
+.input-group {
   position: relative;
 }
-.order-label {
+.label {
   color: gray;
   font-size: 12px;
   position: absolute;
   top: .5rem;
   left: 1rem;
 }
-.order-input-field {
+.input-field {
   margin-bottom: 1rem;
   color: #000000;
   padding: 2rem 1rem .8rem;
@@ -880,11 +881,11 @@ display: none;
   width: 100%;
   max-width: 400px;
 }
-.order-input-field:hover {
+.input-field:hover {
   /* border: 1px solid gray; */
   box-shadow: var(--box-shadow);
 }
-.order-input-field:focus {
+.input-field:focus {
   border: 1px solid var(--third-clr);
 } 
 .order-size-inputs {
@@ -957,22 +958,24 @@ display: none;
   inset: 0;
   height: 100vh;
   z-index: 10000;
-  background-color: whitesmoke;
   padding: 1rem;
+  background-image: url(./assets/layered-waves-haikei\ \(1\).svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 .admin-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 300px;
-  margin: 0 auto;
+  text-align: center;
+  max-width: 400px;
+  margin: 10vh auto;
+  background-color: white;
+  padding: 2rem 1rem;
+  border-radius: 5px;
 }
 .admin-content .input-group {
   width: 100%;
-}
-.admin-title {
-  margin-top: 10vh;
 }
 .admin-subtitle {
   margin-bottom: 5vh;

@@ -12,9 +12,7 @@ const Contact = () => {
   const [mobile, setMobile] = useState('')
   const [subject, setSubject] = useState('')
   const [body, setBody] = useState('')
-  const [error, setError] = useState(false)
-
-  const errorMessage = 'Can\'t be empty'
+  // const [error, setError] = useState(false)
 
 
   const queryClient = useQueryClient()
@@ -35,29 +33,29 @@ const Contact = () => {
     <section className='section contact'>
       <form onSubmit={handleSubmit} className='contact-form'>
         <h1 className='contact-title'>Kontakta oss</h1>
-        <div>
-          <label htmlFor="name" className='contact-label'>Fullständigt namn</label> <br />
+        <div className='input-group'>
+          <label htmlFor="name" className='label'>Fullständigt namn</label> 
           <input
             value={name}
             onChange={(e) => setName(e.target.value)}
             type="text"
-            className='contact-input-field'
+            className='input-field'
           />
         </div>
 
-        <div>
-          <label htmlFor="text" className='contact-label'>Mobil eller email</label> <br />
-          <input value={mobile} onChange={(e) => setMobile(e.target.value)} type="text" className='contact-input-field' />
+        <div className='input-group'>
+          <label htmlFor="text" className='label'>Mobil eller email</label>
+          <input value={mobile} onChange={(e) => setMobile(e.target.value)} type="text" className='input-field' />
         </div>
 
-        <div>
-          <label htmlFor="subject" className='contact-label'>Ärende</label> <br />
-          <input value={subject} onChange={(e) => setSubject(e.target.value)} type="subject" className='contact-input-field' />
+        <div className='input-group'>
+          <label htmlFor="subject" className='label'>Ärende</label> 
+          <input value={subject} onChange={(e) => setSubject(e.target.value)} type="subject" className='input-field' />
         </div>
 
-        <div>
-          <label htmlFor="body" className='contact-label'>Meddelande</label> <br />
-          <textarea value={body} onChange={(e) => setBody(e.target.value)} name="body" cols="30" rows="10" className='contact-input-field' />
+        <div className='input-group'>
+          <label htmlFor="body" className='label'>Meddelande</label> 
+          <textarea value={body} onChange={(e) => setBody(e.target.value)} name="body" cols="30" rows="10" className='input-field' />
         </div>
         <button type='submit' className='btn btn-gray'>Skicka meddelande</button>
       </form>

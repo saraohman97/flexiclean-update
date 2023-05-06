@@ -42,26 +42,5 @@
     }
   ],
   "messages": [
-    {
-      "id": 1,
-      "name": "",
-      "mobile": "",
-      "subject": "",
-      "message": ""
-    },
-    {
-      "name": "",
-      "mobile": "",
-      "subject": "",
-      "body": "",
-      "id": 2
-    },
-    {
-      "name": "j",
-      "mobile": "",
-      "subject": "",
-      "body": "",
-      "id": 3
-    }
   ]
 }

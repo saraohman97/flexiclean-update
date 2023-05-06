@@ -13,12 +13,12 @@ const Admin = ({ setShowAdmin }) => {
                     <h4 className='admin-subtitle'>Logga in</h4>
 
                     <div className='input-group'>
-                        <label htmlFor="text" className='admin-label'>Användarnamn</label> <br />
-                        <input type="text" className='admin-input-field' />
+                        <label htmlFor="text" className='label'>Användarnamn</label> 
+                        <input type="text" className='input-field' />
                     </div>
                     <div className='input-group'>
-                        <label htmlFor="password" className='admin-label'>Lösenord</label> <br />
-                        <input type="password" className='admin-input-field' />
+                        <label htmlFor="password" className='label'>Lösenord</label> 
+                        <input type="password" className='input-field' />
                     </div>
 
                     <button className='btn btn-gray' onClick={() => setLoggedIn(true)}>Logga in</button>
@@ -32,16 +32,16 @@ const Admin = ({ setShowAdmin }) => {
                         <h4 className='admin-subtitle'>Skriv ett nytt inlägg</h4>
 
                         <div className="input-group">
-                            <label htmlFor="text" className='admin-label'>Rubrik</label> <br />
-                            <input type="text" className='admin-input-field' />
+                            <label htmlFor="text" className='label'>Rubrik</label> 
+                            <input type="text" className='input-field' />
                         </div>
                         <div className="input-group">
-                            <label htmlFor="text" className='admin-label'>Meddelande</label> <br />
-                            <textarea type="text" rows="5" className='admin-input-field' />
+                            <label htmlFor="text" className='label'>Meddelande</label> 
+                            <textarea type="text" rows="5" className='input-field' />
                         </div>
                         <div className="input-group">
-                            <label htmlFor="text" className='admin-label'>Bild</label> <br />
-                            <input type="file" className='admin-input-field' />
+                            <label htmlFor="text" className='label'>Bild</label> 
+                            <input type="file" className='input-field' />
                         </div>
                         
                         <button className='btn btn-gray'>Posta</button>
