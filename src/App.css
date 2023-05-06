@@ -980,7 +980,7 @@ display: none;
 .admin-subtitle {
   margin-bottom: 5vh;
 }
-.admin-label {
+/* .admin-label {
   width: 100%;
   margin-bottom: .5rem;
   color: var(--third-clr);
@@ -996,6 +996,10 @@ display: none;
   outline: none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   resize: none;
+} */
+.admin-input-wrapper {
+  display: flex;
+  gap: 1rem;
 }
 .admin-input-field:focus {
   border: 1px solid var(--third-clr);

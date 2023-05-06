@@ -3,7 +3,7 @@ import { useMutation, useQueryClient } from 'react-query';
 import { AiOutlineTwitter } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import { AiFillYoutube } from "react-icons/ai";
-import { addPost } from '../data/api.js';
+import { addMessage } from '../data/api.js';
 
 
 
@@ -17,15 +17,15 @@ const Contact = () => {
 
   const queryClient = useQueryClient()
 
-  const addPostMutation = useMutation(addPost, {
+  const addMessageMutation = useMutation(addMessage, {
     onSuccess: () => {
-      queryClient.invalidateQueries("posts")
+      queryClient.invalidateQueries("messages")
     }
   })
 
   const handleSubmit = e => {
     e.preventDefault()
-    addPostMutation.mutate({ name, mobile, subject, body })
+    addMessageMutation.mutate({ name, mobile, subject, body })
     setName(''); setMobile(''); setSubject(''); setBody('')
   }
 
