@@ -19,25 +19,26 @@ const PutOrder = ({ setOrderModalOpen }) => {
                         <>
                             <div className="order-form-left">
                                 <h1 className='order-title'>Beställning</h1>
+                                <p className='order-subtitle'>Går bara att beställa inom Sverige. Kontakta oss för samarbeten utanför Sverige. </p>
                                 <div className='input-group'>
-                                    <label htmlFor="text" className='label'>Fullständigt namn</label>
+                                    <label htmlFor="text" className='label'>För- och efternamn</label>
                                     <input type="text" className='input-field' />
                                 </div>
                                 <div className='input-group'>
-                                    <label htmlFor="text" className='label'>Email adress</label>
+                                    <label htmlFor="text" className='label'>Epost adress</label>
                                     <input type="email" className='input-field' />
                                 </div>
                                 <div className='input-group'>
-                                    <label htmlFor="text" className='label'>Mobil nummer</label>
+                                    <label htmlFor="text" className='label'>Telefon nummer</label>
                                     <input type="text" className='input-field' />
                                 </div>
                                 <div className="order-size-inputs">
                                     <div className='order-size input-group'>
-                                        <label htmlFor="text" className='label'>B</label>
+                                        <label htmlFor="text" className='label'>Bredd</label>
                                         <input type="number" min={0} className='input-field' />
                                     </div>
                                     <div className='order-size input-group'>
-                                        <label htmlFor="text" className='label'>H</label>
+                                        <label htmlFor="text" className='label'>Längd</label>
                                         <input type="number" min={0} className='input-field' />
                                     </div>
                                 </div>
@@ -65,31 +66,31 @@ const PutOrder = ({ setOrderModalOpen }) => {
                     {nextView && (
                         <>
                             <div className="order-form-left">
-                                <h1 className='order-title'>Beställning</h1>
+                                <h1 className='order-title'>Leverans- <br /> och faktureringsadress</h1>
                                 <div className='input-group'>
-                                    <label htmlFor="text" className='label'>Fullständigt namn</label>
+                                    <label htmlFor="text" className='label'>Faktura email</label>
                                     <input type="text" className='input-field' />
                                 </div>
                                 <div className='input-group'>
-                                    <label htmlFor="text" className='label'>Email adress</label>
+                                    <label htmlFor="text" className='label'>Företagsnamn</label>
                                     <input type="email" className='input-field' />
                                 </div>
                                 <div className='input-group'>
-                                    <label htmlFor="text" className='label'>Mobil nummer</label>
+                                    <label htmlFor="text" className='label'>För- och efternamn</label>
                                     <input type="text" className='input-field' />
                                 </div>
                             </div>
                             <div className="order-form-right">
                                 <div className='input-group'>
-                                    <label htmlFor="text" className='label'>Fullständigt namn</label>
+                                    <label htmlFor="text" className='label'>Postnummer</label>
                                     <input type="text" className='input-field' />
                                 </div>
                                 <div className='input-group'>
-                                    <label htmlFor="text" className='label'>Email adress</label>
+                                    <label htmlFor="text" className='label'>Ort</label>
                                     <input type="email" className='input-field' />
                                 </div>
                                 <div className='input-group'>
-                                    <label htmlFor="text" className='label'>Mobil nummer</label>
+                                    <label htmlFor="text" className='label'>Kommun</label>
                                     <input type="text" className='input-field' />
                                 </div>
                                 <div className="order-btn-wrapper">

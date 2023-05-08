@@ -9,7 +9,9 @@ const Contact = () => {
 
   const [message, setMessage] = useState({
     fullName: '',
-    email: ''
+    email: '',
+    subject: '',
+    body: ''
   })
   const [error, setError] = useState(false)
   const [success, setSuccess] = useState(false)
@@ -32,21 +34,22 @@ const Contact = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log(message)
-      if(message.fullName === '' || message.email === '') {
-        setError(true)
-      }
-      else {
-        setError(false)
-        addMessageMutation.mutate({
-          ...message
-        });
-        setMessage({
-          fullName: '',
-          email: ''
-        });
-        setSuccess(true)
-      }
+    if (message.fullName === '' || message.email === '' || message.subject === '' || message.body === '') {
+      setError(true)
+    }
+    else {
+      setError(false)
+      addMessageMutation.mutate({
+        ...message
+      });
+      setMessage({
+        fullName: '',
+        email: '',
+        subject: '',
+        body: ''
+      });
+      setSuccess(true)
+    }
 
   }
 
@@ -54,6 +57,9 @@ const Contact = () => {
     <section className='section contact'>
       <form onSubmit={handleSubmit} className='contact-form'>
         <h1 className='contact-title'>Kontakta oss</h1>
+        {error && <p style={{ color: 'red', marginBottom: '1rem' }}>Fälten kan inte vara tomma. </p>}
+        {success && <p style={{ color: 'green', marginBottom: '1rem' }}>Ditt meddelande har skickats. </p>}
+
         <div className='input-group'>
           <label htmlFor="name" className='label'>Fullständigt namn</label>
           <input
@@ -73,21 +79,32 @@ const Contact = () => {
             onChange={handleChangeInput}
             type="text"
             className='input-field'
-            />
-        </div>
-
-        {error && <p style={{ color: 'red', marginBottom: '1rem' }}>Fälten kan inte vara tomma. </p>}
-        {success && <p style={{ color: 'green', marginBottom: '1rem' }}>Ditt meddelande har skickats. </p>}
-
-        {/* <div className='input-group'>
-          <label htmlFor="subject" className='label'>Ärende</label> 
-          <input value={subject} onChange={(e) => setSubject(e.target.value)} type="subject" className='input-field' />
+          />
         </div>
 
         <div className='input-group'>
-          <label htmlFor="body" className='label'>Meddelande</label> 
-          <textarea value={body} onChange={(e) => setBody(e.target.value)} name="body" cols="30" rows="10" className='input-field' />
-        </div> */}
+          <label htmlFor="subject" className='label'>Ärende</label>
+          <input
+            name='subject'
+            value={message['subject']}
+            onChange={handleChangeInput}
+            type="text"
+            className='input-field'
+          />
+        </div>
+
+        <div className='input-group'>
+          <label htmlFor="body" className='label'>Meddelande</label>
+          <textarea
+            name='body'
+            value={message['body']}
+            onChange={handleChangeInput}
+            cols="30"
+            rows="10"
+            className='input-field'
+          />
+        </div>
+
         <button type='submit' className='btn btn-gray'>Skicka meddelande</button>
       </form>
 

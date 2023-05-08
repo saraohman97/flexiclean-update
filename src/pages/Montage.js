@@ -15,7 +15,7 @@ const Montage = () => {
   return (
     <>
       <section className='section projects-hero'>
-        <div className="projects-hero-heading">
+        <div className="montage-hero-heading">
           <h1 className='projects-hero-title'>Montage</h1>
           <p className='projects-hero-subtitle'>Montering & byte av filterdynor är busenkelt</p>
         </div>

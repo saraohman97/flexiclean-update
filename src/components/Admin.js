@@ -1,17 +1,44 @@
 import React, { useState } from 'react'
 import { useMutation, useQueryClient } from 'react-query'
 import { addPost } from '../data/api.js';
-
+import { useNavigate } from 'react-router-dom';
 
 const Admin = ({ setShowAdmin }) => {
     const [loggedIn, setLoggedIn] = useState(false)
-    const [title, setTitle] = useState('')
-    const [message, setMessage] = useState('')
-    const [image, setImage] = useState('')
-    const [link, setLink] = useState('')
-
+    const [errorAdmin, setErrorAdmin] = useState(false)
+    const navigate = useNavigate()
     const current = new Date();
-    const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}, ${current.getHours()}.${current.getMinutes()}`;
+    const [post, setPost] = useState({
+        title: '',
+        message: '',
+        image: '',
+        link: '',
+        date: `${current.getDate()}/${current.getMonth() + 1}/${current.getFullYear()}, ${current.getHours()}.${current.getMinutes()}`
+    })
+    const [admin, setAdmin] = useState({
+        user: '',
+        password: ''
+    })
+
+    const handleLogin = (e) => {
+        e.preventDefault()
+        if (admin.user === 'a' && admin.password === 'a') {
+            setLoggedIn(true)
+        } else {
+            setErrorAdmin(true)
+        }
+    }
+
+    const handleChangeInput = (e) => {
+        setAdmin({
+            ...admin,
+            [e.target.name]: e.target.value
+        })
+        setPost({
+            ...post,
+            [e.target.name]: e.target.value
+        })
+    }
 
     const queryClient = useQueryClient()
 
@@ -23,8 +50,11 @@ const Admin = ({ setShowAdmin }) => {
 
     const handleSubmit = e => {
         e.preventDefault()
-        addPostMutation.mutate({ title, message, image, link, date })
-          setTitle(''); setMessage(''); setImage(''); setLink('')
+        addPostMutation.mutate({
+            ...post
+        });
+        setShowAdmin(false)
+        navigate('/')
     }
 
     return (
@@ -32,20 +62,23 @@ const Admin = ({ setShowAdmin }) => {
             <button className="btn-close" onClick={() => setShowAdmin(false)}>X</button>
 
             {!loggedIn && (
-                <form className='admin-form'>
+                <form className='admin-form' onSubmit={handleLogin}>
                     <h1 className='admin-title'>Admin</h1>
                     <h4 className='admin-subtitle'>Logga in</h4>
 
                     <div className='input-group'>
                         <label htmlFor="text" className='label'>Användarnamn</label>
-                        <input type="text" className='input-field' />
+                        <input onChange={handleChangeInput} name='user' value={admin['user']} type="text" className='input-field' />
                     </div>
                     <div className='input-group'>
                         <label htmlFor="password" className='label'>Lösenord</label>
-                        <input type="password" className='input-field' />
+                        <input onChange={handleChangeInput} name='password' value={admin['password']} type="password" className='input-field' />
                     </div>
 
-                    <button className='btn btn-gray' onClick={() => setLoggedIn(true)}>Logga in</button>
+                    {errorAdmin && <p style={{ color: 'red' }}>Fel användarnamn eller lösenord.</p>}
+
+                    <button className='btn btn-gray'>Logga in</button>
+                    {/* <button onClick={() => setLoggedIn(true)}>Button</button> */}
                 </form>
             )}
 
@@ -57,20 +90,20 @@ const Admin = ({ setShowAdmin }) => {
 
                         <div className="input-group">
                             <label htmlFor="text" className='label'>Rubrik</label>
-                            <input value={title} onChange={(e) => setTitle(e.target.value)} type="text" className='input-field' />
+                            <input name='title' value={post['title']} onChange={handleChangeInput} type="text" className='input-field' />
                         </div>
                         <div className="input-group">
                             <label htmlFor="text" className='label'>Meddelande</label>
-                            <textarea value={message} onChange={(e) => setMessage(e.target.value)} type="text" rows="5" className='input-field' />
+                            <textarea name='message' value={post['message']} onChange={handleChangeInput} type="text" rows="5" className='input-field' />
                         </div>
                         <div className='admin-input-wrapper'>
                             <div className="input-group">
                                 <label htmlFor="text" className='label'>Bild</label>
-                                <input type="file" value={image} onChange={(e) => setImage(e.target.value)} className='input-field' />
+                                <input type="file" name='image' value={post['image']} onChange={handleChangeInput} className='input-field' />
                             </div>
                             <div className="input-group">
                                 <label htmlFor="text" className='label'>Link</label>
-                                <input type="file" value={link} onChange={(e) => setLink(e.target.value)} className='input-field' />
+                                <input type="file" name='link' value={post['link']} onChange={handleChangeInput} className='input-field' />
                             </div>
                         </div>
 

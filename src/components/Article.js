@@ -7,6 +7,7 @@ const Article = ({ post }) => {
       <small className='sidebar-date'>{post.date}</small>
       <h3 className='sidebar-header'>{post.title}</h3>
       <p>{post.message}</p>
+      <a href={post.link}><button className='btn btn-gray'>Läs</button></a>
     </div>
   )
 }
