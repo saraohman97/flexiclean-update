@@ -29,8 +29,67 @@ const Products = ({ setOrderModalOpen }) => {
           <h1 className='showcase1-title'>FlexiClean filterkassett för dagvattenrening</h1>
           <p><strong>FlexiClean är filterkassett för rening av dagvatten passar i brunnar med innerdiameter 350 - 1000 mm. filtret renar tungmetaller, näringsämnen, oljor PAH och Pfas.</strong> <br /> <br />Kassetten flödar 160 l/min filtrerat vatten och är försedd med en bypassfunktion vid höga flöden. Filterpåsen som består av en blandning av furubark och träflis byts normalt en gång per år. Att tänka på. FlexiClean  kräver minst 800mm/1000 djup i brunnen och med slät innersida på brunnen. Teleskopbeteckning kan försvåra montaget. Tänk dessutom på att ”hålet” i beteckningen måste vara ca 300mm i diameter”.</p>
           <div className='btn-wrapper'>
-            <button className='btn btn-gray'>Se storlekar</button>
             <button className='btn btn-blue' onClick={() => setOrderModalOpen(true)}>Beställ</button>
+            <details>
+              <summary className='btn btn-gray btn-filter'>Se storlekar</summary>
+              <table>
+                <tr>
+                  <th><p>Artikelnummer</p></th>
+                  <th><p>Passar till brunn</p></th>
+                  <th><p>Filtertyp</p></th>
+                </tr>
+                <tr>
+                  <td>100100 FC408SA</td>
+                  <td>350-450 mm</td>
+                  <td>600 mm</td>
+                </tr>
+                <tr>
+                  <td>100101 FC410SA</td>
+                  <td>350-450 mm</td>
+                  <td>800 mm</td>
+                </tr>
+                <tr>
+                  <td>100102 FC508SA</td>
+                  <td>500 mm</td>
+                  <td>600 mm</td>
+                </tr>
+                <tr>
+                  <td>100103 FC510SA</td>
+                  <td>500 mm</td>
+                  <td>800 mm</td>
+                </tr>
+                <tr>
+                  <td>100104 FC608SA</td>
+                  <td>600 mm</td>
+                  <td>600 mm</td>
+                </tr>
+                <tr>
+                  <td>100105 FC610SA</td>
+                  <td>600 mm</td>
+                  <td>800 mm</td>
+                </tr>
+                <tr>
+                  <td>100106 FC1008SA</td>
+                  <td>1000 mm</td>
+                  <td>600 mm</td>
+                </tr>
+                <tr>
+                  <td>100107 FC1010SA</td>
+                  <td>1000 mm</td>
+                  <td>800 mm</td>
+                </tr>
+                <tr>
+                  <td>100113 Filterdyna</td>
+                  <td>600 mm</td>
+                  <td>600 mm</td>
+                </tr>
+                <tr>
+                  <td>100114 Filterdyna</td>
+                  <td>800 mm</td>
+                  <td>800 mm</td>
+                </tr>
+              </table>
+            </details>
           </div>
         </div>
       </section>
@@ -42,11 +101,39 @@ const Products = ({ setOrderModalOpen }) => {
         <div className="showcase2-data">
           <h1 className='showcase2-title'>FlexiClean filterkassett för dagvatten och granulatfiltrering (Fotbollskassetten)</h1>
           <p> <strong>FlexiClean granulatfilter rening av dagvatten samt filtrering av granulat passar i brunnar med innerdiameter 350 - 1000 mm. filtret renar tungmetaller, näringsämnen, oljor, PAH och Pfas, samt filtrerar partiklar ned till 42 mikrometer. </strong> <br /> <br /> Kassetten flödar 45 l/min filtrerat vatten och filterpåsen som består av en blandning av furubark och träflis byts normalt en gång per år.
- 
-Att tänka på. FlexiClean Granulat samt kräver minst 800/1000 mm djup i brunnen och med slät innersida på brunnen. Teleskopbeteckning kan försvåra montaget. Tänk dessutom på att ”hålet” i beteckningen måste vara ca 330mm i diameter".</p>
+
+            Att tänka på. FlexiClean Granulat samt kräver minst 800/1000 mm djup i brunnen och med slät innersida på brunnen. Teleskopbeteckning kan försvåra montaget. Tänk dessutom på att ”hålet” i beteckningen måste vara ca 330mm i diameter".</p>
           <div className='btn-wrapper'>
-            <button className='btn btn-gray'>Se storlekar</button>
             <button className='btn btn-blue' onClick={() => setOrderModalOpen(true)}>Beställ</button>
+            <details>
+              <summary className='btn btn-gray btn-filter'>Se storlekar</summary>
+              <table className='showcase2-table'>
+                <tr>
+                  <th><p>Artikelnummer</p></th>
+                  <th><p>Passar till brunn</p></th>
+                </tr>
+                <tr>
+                  <td>200100 FC 408 Granulat</td>
+                  <td>350-450 mm</td>
+                </tr>
+                <tr>
+                  <td>200102 FC 508 Granulat</td>
+                  <td>500 mm</td>
+                </tr>
+                <tr>
+                  <td>200103 FC 608 Granulat</td>
+                  <td>600 mm</td>
+                </tr>
+                <tr>
+                  <td>200104 FC 1008 Granulat</td>
+                  <td>1000 mm</td>
+                </tr>
+                <tr>
+                  <td>100113 Filterdyna 600mm</td>
+                  <td>600 mm</td>
+                </tr>
+              </table>
+            </details>
           </div>
         </div>
       </section>

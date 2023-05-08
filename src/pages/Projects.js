@@ -47,20 +47,67 @@ const Projects = () => {
       </section>
 
       <section className='section showcase5'>
-        <div className="showcase5-item">
-          <img src={project3} className='showcase5-img' alt="flexiClean filterväggar för dagvattenrening" />
-          <h1 className='showcase5-title'>FlexiClean filterväggar för dagvattenrening</h1>
-          <p>FlexiClean filterväggar för rening av dagvatten. Filtret renar tungmetaller, näringsämnen, oljor PAH och Pfas. Och är godkänd som oljeavskiljare på parkeringsplatser. Flödet beror på hur många kassetter man använder.Filtren är försedda med en bypassfunktion vid höga flöden. Filterpåsen som består av en blandning av furubark och träflis byts normalt en gång per år.</p>
-          <div className="btn-wrapper"><Link to='/kontakta-oss'><button className='btn btn-gray'>Ta kontakt</button></Link></div>
-        </div>
-        <div className="showcase5-item">
+      <div className="showcase5-item">
           <img src={project2} className='showcase5-img' alt="flexiClean filterbrunnar för dagvattenrening" />
           <h1 className='showcase5-title'>FlexiClean filterbrunnar för dagvattenrening</h1>
           <p>FlexiClean filterbrunnar för rening av dagvatten. Dessa är för permanent placering men kan även användas mobilt. Filtret renar tungmetaller, näringsämnen, oljor PAH och Pfas. Filterbrunnen är fördelad på en sedimenteringsdel samt en filtreringsdel . Filterbrunnen flödar 320-640 l/min filtrerat vatten beroende på dimension Filtren är försedda med en bypassfunktion vid höga flöden. Filterpåsen som består av en blandning av furubark och träflis byts normalt en gång per år.</p>
           <div className="btn-wrapper">
-            <Link to='/kontakta-oss'><button className='btn btn-gray'>Ta kontakt</button></Link>
-            <button className='btn btn-blue'>Storlekar</button>
+            <Link to='/kontakta-oss'><button className='btn btn-blue'>Ta kontakt</button></Link>
+            <details>
+              <summary className='btn btn-gray btn-filter'>Se storlekar</summary>
+              <table>
+                <tr>
+                  <th><p>Artikelnummer</p></th>
+                  <th><p>Antal kassetter</p></th>
+                  <th><p>Volym kapacitet</p></th>
+                </tr>
+                <tr>
+                  <td>79 122. Filterbrunn Dagvatten DN600</td>
+                  <td>2 st</td>
+                  <td>19 m3/h</td>
+                </tr>
+                <tr>
+                  <td>79 123. Filterbrunn Dagvatten DN1000</td>
+                  <td>3 st</td>
+                  <td>29 m3/h</td>
+                </tr>
+                <tr>
+                  <td>79 124. Filterbrunn Dagvatten DN1200</td>
+                  <td>4 st</td>
+                  <td>38 m3/h</td>
+                </tr>
+              </table>
+            </details>
           </div>
+        </div>
+        <div className="showcase5-item">
+          <img src={project3} className='showcase5-img' alt="flexiClean filterväggar för dagvattenrening" />
+          <h1 className='showcase5-title'>FlexiClean filterväggar för dagvattenrening</h1>
+          <p>FlexiClean filterväggar för rening av dagvatten. Filtret renar tungmetaller, näringsämnen, oljor PAH och Pfas. Och är godkänd som oljeavskiljare på parkeringsplatser. Flödet beror på hur många kassetter man använder.Filtren är försedda med en bypassfunktion vid höga flöden. Filterpåsen som består av en blandning av furubark och träflis byts normalt en gång per år.</p>
+          <div className="btn-wrapper"><Link to='/kontakta-oss'><button className='btn btn-blue'>Ta kontakt</button></Link></div>
+        </div>
+      </section>
+
+      <section className='section showcase6'>
+        <h1 className='project-title'>Uthyrning</h1>
+        <p>Filterbrunnen för dagvattenrening finns för uthyrning via Terana AB. Kontakta oss för närmare information.</p>
+        <div className="btn-wrapper">
+        <button className='btn btn-blue'>Kontakta oss</button>
+        <details>
+              <summary className='btn btn-gray btn-filter'>Se storlek</summary>
+              <table className='showcase6-table'>
+                <tr>
+                  <th><p>Artikelnummer</p></th>
+                  <th><p>Antal kassetter</p></th>
+                  <th><p>Volym kapacitet</p></th>
+                </tr>
+                <tr>
+                  <td>79 123. Filterbrunn Dagvatten DN1000</td>
+                  <td>3 st</td>
+                  <td>29 m3/h</td>
+                </tr>
+              </table>
+            </details>
         </div>
       </section>
     </>

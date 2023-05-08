@@ -92,6 +92,73 @@ img {
 }
 
 
+
+
+/* ---------filter tables----------- */
+.btn-filter {
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 1rem;
+  position: absolute;
+  background-color: white;
+  z-index: 100;
+  right: 1rem;
+  width: 80%;
+  box-shadow: var(--box-shadow);
+  max-width: 700px;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+/* tr:nth-child(even) {
+  background-color: #dddddd;
+} */
+
+/* for small devices */
+@media screen and (max-width: 350px) {
+  table {
+    right: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+/* for medium devices */
+@media screen and (min-width: 568px) {
+}
+@media screen and (min-width: 750px) {
+  table {
+    left: 7rem;
+    width: 80%;
+  }
+  .showcase2-table {
+    right: 15rem;
+  }
+}
+/* for big devices */
+@media screen and (min-width: 1024px) {
+  table {
+    left: auto;
+    right: auto;
+  }
+  .showcase6-table {
+    left: 10rem;
+  }
+}
+
+
+
+
+
+
+
+
+
 /* ---------Navbar----------- */
 nav {
   background-color: whitesmoke;
@@ -514,9 +581,16 @@ nav {
 
 /* ---------projects page----------- */
 .projects-intro,
-.map {
+.map,
+.showcase6 {
   text-align: center;
   max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.showcase6 {
+  margin-top: 2rem;
 }
 .projects-intro-title,
 .map-title {
@@ -559,6 +633,13 @@ nav {
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
+
+/* .showcase6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+} */
 
 /* for small devices */
 @media screen and (max-width: 350px) {
@@ -846,7 +927,7 @@ display: none;
 
 /* ---------put-order modal----------- */
 .order-content {
-  background-image: url(./assets/layered-waves-haikei\ \(1\).svg);
+  background-image: url(./assets/layered-waves-haikei.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -979,7 +1060,7 @@ display: none;
   height: 100vh;
   z-index: 10000;
   padding: 1rem;
-  background-image: url(./assets/layered-waves-haikei\ \(1\).svg);
+  background-image: url(./assets/layered-waves-haikei.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -1118,4 +1199,7 @@ display: none;
 @media screen and (min-width: 1024px) {
   
 }
+
+
+
 
