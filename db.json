@@ -41,52 +41,14 @@
       "message": "Filterbyten, IVL rapport. Mässor"
     },
     {
-      "title": "rubrik",
-      "message": "meddelande",
+      "title": "Nyhetsmail Vår, 2023",
+      "message": "Kirre är söt",
       "image": "",
       "link": "",
-      "date": "8/5/2023, 1.48",
+      "date": "9/5/2023, 14.21",
       "user": "a",
       "password": "a",
       "id": 6
-    },
-    {
-      "title": "d",
-      "message": "d",
-      "image": "",
-      "link": "C:\\fakepath\\Frontend utvecklare cv.pdf",
-      "date": "8/5/2023, 1.50",
-      "user": "a",
-      "password": "a",
-      "id": 7
-    },
-    {
-      "title": "a",
-      "message": "a",
-      "image": "",
-      "link": "",
-      "date": "8/5/2023, 2.25",
-      "user": "a",
-      "password": "a",
-      "id": 8
-    },
-    {
-      "title": "c",
-      "message": "c",
-      "image": "",
-      "link": "",
-      "date": "8/5/2023, 2.28",
-      "id": 9
-    },
-    {
-      "title": "e",
-      "message": "e",
-      "image": "",
-      "link": "",
-      "date": "8/5/2023, 2.29",
-      "user": "a",
-      "password": "a",
-      "id": 10
     }
   ],
   "messages": [

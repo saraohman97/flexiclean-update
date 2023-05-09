@@ -108,17 +108,22 @@ table {
   z-index: 100;
   right: 1rem;
   width: 80%;
-  box-shadow: var(--box-shadow);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.257);
   max-width: 700px;
+  border-radius: 1rem;
+  font-size: small;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: gray;
 }
 td, th {
-  border: 1px solid #dddddd;
+  /* border: 1px solid #dddddd; */
+  border-bottom: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
 }
-/* tr:nth-child(even) {
+tr:nth-child(even) {
   background-color: #dddddd;
-} */
+}
 
 /* for small devices */
 @media screen and (max-width: 350px) {
@@ -305,6 +310,10 @@ nav {
 /* ---------sidebar section----------- */
 .home-sidebar {
   margin-top: 2rem;
+}
+.home-sidebar-data {
+  display: flex;
+  flex-direction: column-reverse;
 }
 .home-sidebar-title {
   font-style: italic;

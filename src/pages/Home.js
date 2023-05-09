@@ -27,7 +27,7 @@ const Home = () => {
             <img src='https://dst15js82dk7j.cloudfront.net/252829/72746504-FugNx.jpg' alt="" />
             <img src='https://h24-original.s3.amazonaws.com/252829/24452359-1YbU8.jpg' alt="" />
             <img src='https://dst15js82dk7j.cloudfront.net/252829/78558023-2311B.jpg' alt="" />
-            </div>
+          </div>
           <p>FlexiClean är en ﬁlterhållare för rening av process- och dag-vatten. Produkten bygger på djup kunskap om dagvatten och dagvattenbrunnar och en förståelse för de utmaningar kommuner och privata aktörer ställs inför varje dag. FlexiClean är laddad med egenskaper som avsevärt förbättrar och förenklar arbetet med inspektion och underhåll av brunnen. Och den kan anpassas för rening i alla tänkbara miljöer.</p>
           <br />
           <h3>En insats för bättre vatten</h3>
@@ -36,7 +36,7 @@ const Home = () => {
           <h3>GÖR BÅDE SITT OCH ANDRAS JOBB</h3>
           <p>Produkten ska naturligtvis göra sitt jobb i brunnen och rena dagvattnet. Men det räcker inte. De som sköter underhållet ska också kunna göra sitt jobb. Att minska antalet lyft blir allt viktigare, särskilt när utveckling går mot fler brunnar med filter som ska inspekteras och bytas. <br /> <br />
             I det avseendet blir FlexiClean ett lyft, men inte ett onödigt sådant. Hållaren upptar maximalt 50 procent av en brunns tvärsnittyta och behöver inte lyftas upp för att avgöra graden av mekanisk eller kemisk igensättning. Den behöver heller inte lyftas upp vid slamsugning eller ångning. Slangen får plats ändå. Och när det väl är dags att byta filter är det bara att dra ut insatsen, kassetten som utgör produktens inre del. All användarvänlighet kapar naturligtvis tid och minskar antalet moment i arbetet − det spar både pengar och ryggar. Att produkten ger en bättre arbetsmiljö är bra, men den ska också fungera i flera olika miljöer. Därför är FlexiClean inte anpassad för ett speciellt ändamål och kan därmed sanera gångtunnlar lika bra som bensinstationer och parkeringshus. Tur är väl det, för det finns varken universalfilter eller lyckobrunnar. Bara önsketänkande och visioner kring miljön som kräver hårt arbete för att förverkliga. En bra start är att investera i en filterhållare värd vatten.</p>
-          
+
           <h1 className='home-main-subtitle'>Historia</h1>
           <div className='home-main-img'>
             <img src='https://dst15js82dk7j.cloudfront.net/252829/72745337-3J24D.jpg' alt="" />
@@ -86,15 +86,17 @@ const Home = () => {
         <aside className="home-sidebar">
           <h3 className='home-sidebar-title'>Nyheter</h3>
 
-          {data?.data.map((post) => {
-            return <Article key={post.id} post={post} />
-          })}
-          {isLoading && (
-            <h2 className='mt-2'>Loading....</h2>
-          )}
-          {isError && (
-            <h2 className='mt-2'>{error.message}</h2>
-          )}
+          <div className="home-sidebar-data">
+            {data?.data.map((post) => {
+              return <Article key={post.id} post={post} />
+            })}
+            {isLoading && (
+              <h2 className='mt-2'>Loading....</h2>
+            )}
+            {isError && (
+              <h2 className='mt-2'>{error.message}</h2>
+            )}
+          </div>
         </aside>
       </section>
     </>
