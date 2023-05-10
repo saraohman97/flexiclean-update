@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logo from '../assets/logo.png'
+import logo from '../assets/logotype.png'
 
 const PutOrder = ({ setOrderModalOpen }) => {
     const [nextView, setNextView] = useState(false)

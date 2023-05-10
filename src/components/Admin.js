@@ -28,12 +28,14 @@ const Admin = ({ setShowAdmin }) => {
             setErrorAdmin(true)
         }
     }
-
-    const handleChangeInput = (e) => {
+    const handleLogingChangeInput = (e) => {
         setAdmin({
             ...admin,
             [e.target.name]: e.target.value
         })
+    }
+
+    const handleChangeInput = (e) => {
         setPost({
             ...post,
             [e.target.name]: e.target.value
@@ -62,24 +64,23 @@ const Admin = ({ setShowAdmin }) => {
             <button className="btn-close" onClick={() => setShowAdmin(false)}>X</button>
 
             {!loggedIn && (
-                <form className='admin-form' onSubmit={handleLogin}>
+                <div className='admin-form'>
                     <h1 className='admin-title'>Admin</h1>
                     <h4 className='admin-subtitle'>Logga in</h4>
 
                     <div className='input-group'>
                         <label htmlFor="text" className='label'>Användarnamn</label>
-                        <input onChange={handleChangeInput} name='user' value={admin['user']} type="text" className='input-field' />
+                        <input onChange={handleLogingChangeInput} name='user' value={admin['user']} type="text" className='input-field' />
                     </div>
                     <div className='input-group'>
                         <label htmlFor="password" className='label'>Lösenord</label>
-                        <input onChange={handleChangeInput} name='password' value={admin['password']} type="password" className='input-field' />
+                        <input onChange={handleLogingChangeInput} name='password' value={admin['password']} type="password" className='input-field' />
                     </div>
 
                     {errorAdmin && <p style={{ color: 'red' }}>Fel användarnamn eller lösenord.</p>}
 
-                    <button className='btn btn-gray'>Logga in</button>
-                    {/* <button onClick={() => setLoggedIn(true)}>Button</button> */}
-                </form>
+                    <button onClick={handleLogin} className='btn btn-gray'>Logga in</button>
+                </div>
             )}
 
             {loggedIn && (

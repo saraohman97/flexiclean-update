@@ -1,4 +1,5 @@
-import logo from '../assets/logo.png'
+// import logo from '../assets/logo.png'
+import logo from '../assets/logotype.png'
 import { Link, NavLink } from 'react-router-dom'
 import { AiOutlineDown } from "react-icons/ai";
 import PutOrder from './PutOrder';

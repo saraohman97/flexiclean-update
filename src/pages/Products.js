@@ -1,6 +1,7 @@
 import React from 'react'
 import product_one from '../assets/product1.jpg'
-import product_two from '../assets/product2.jpg'
+// import product_two from '../assets/product2.jpg'
+import product_two from '../assets/product.two.png'
 import kalmar from '../assets/kalmar.png'
 import vasteras from '../assets/vasteras.jpg'
 import img from '../assets/header-products.jpg'
