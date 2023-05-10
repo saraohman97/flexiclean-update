@@ -11,3 +11,7 @@ export const addMessage = async (message) => {
 export const addPost = async (post) => {
     return await postsApi.post("/posts", post)
 }
+
+export const addOrder = async (order) => {
+    return await postsApi.post("/orders", order)
+}
