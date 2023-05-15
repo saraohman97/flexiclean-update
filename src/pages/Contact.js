@@ -1,29 +1,19 @@
 import React, { useState } from 'react'
-import { useMutation, useQueryClient } from 'react-query';
 import { AiOutlineTwitter } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import { AiFillYoutube } from "react-icons/ai";
-import { addMessage } from '../data/api.js';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
 
   const [message, setMessage] = useState({
-    fullName: '',
-    email: '',
+    user_name: '',
+    user_email: '',
     subject: '',
     body: ''
   })
   const [error, setError] = useState(false)
   const [success, setSuccess] = useState(false)
-
-  const queryClient = useQueryClient()
-
-
-  const addMessageMutation = useMutation(addMessage, {
-    onSuccess: () => {
-      queryClient.invalidateQueries('messages')
-    }
-  })
 
   const handleChangeInput = (e) => {
     setMessage({
@@ -32,23 +22,26 @@ const Contact = () => {
     })
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if (message.fullName === '' || message.email === '' || message.subject === '' || message.body === '') {
+    if (message.user_name === '' || message.user_email === '' || message.subject === '' || message.body === '') {
       setError(true)
     }
     else {
+
+      emailjs.sendForm('service_wp153qc', 'template_kpw777i', e.target, 'bxhMD_7j9kjdXdrQf')
+        .then((result) => {
+          console.log(result.text);
+        }, (error) => {
+          console.log(error.text);
+        });
+
       setError(false)
-      addMessageMutation.mutate({
-        ...message
-      });
-      setMessage({
-        fullName: '',
-        email: '',
-        subject: '',
-        body: ''
-      });
       setSuccess(true)
+      message.user_name = ''
+      message.user_email = ''
+      message.subject = ''
+      message.body = ''
     }
 
   }
@@ -63,8 +56,8 @@ const Contact = () => {
         <div className='input-group'>
           <label htmlFor="name" className='label'>Fullständigt namn</label>
           <input
-            name='fullName'
-            value={message['fullName']}
+            name='user_name'
+            value={message['user_name']}
             onChange={handleChangeInput}
             type="text"
             className='input-field'
@@ -74,8 +67,8 @@ const Contact = () => {
         <div className='input-group'>
           <label htmlFor="text" className='label'>Email</label>
           <input
-            name='email'
-            value={message['email']}
+            name='user_email'
+            value={message['user_email']}
             onChange={handleChangeInput}
             type="text"
             className='input-field'
@@ -94,7 +87,7 @@ const Contact = () => {
         </div>
 
         <div className='input-group'>
-          <label htmlFor="body" className='label'>Meddelande</label>
+          <label htmlFor="message" className='label'>Meddelande</label>
           <textarea
             name='body'
             value={message['body']}
