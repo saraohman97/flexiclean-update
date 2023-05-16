@@ -3,23 +3,28 @@ import logo from '../assets/logotype.png'
 import { Link, NavLink } from 'react-router-dom'
 import { AiOutlineDown } from "react-icons/ai";
 import PutOrder from './PutOrder';
+import { useState } from 'react';
 
-const Navbar = ({menuOpen, orderModalOpen, setOrderModalOpen, setMenuOpen, closeBtn }) => {
+const Navbar = ({ menuOpen, orderModalOpen, setOrderModalOpen, setMenuOpen, closeBtn }) => {
+    const [showDropdown, setShowDropdown] = useState(false)
+
     return (
         <nav>
             <div className="navbar-wrapper">
                 <NavLink to='/'><img className='nav-logo' src={logo} alt="logotype flexiclean blue gray grey logo" /></NavLink>
                 <div className="nav-links">
-                    <div className='nav-link dropdown'>
+                    <div className='nav-link dropdown' onMouseEnter={() => setShowDropdown(true)} onMouseLeave={() => setShowDropdown(false)}>
                         Produkter
                         <AiOutlineDown />
-                        <div className="dropdown-content">
-                            <NavLink to='/produkter' className='nav-link drop'>Dagvatten- och granulatfilter</NavLink>
-                            <hr style={{ width: '100%', border: '1px solid rgb(239, 239, 239)' }} />
-                            <NavLink to='/projekt' className='nav-link drop'>Stora projekt</NavLink>
-                            <hr style={{ width: '100%', border: '1px solid rgb(239, 239, 239)' }} />
-                            <NavLink to='/montage' className='nav-link drop'>Montage</NavLink>
-                        </div>
+                        {showDropdown && (
+                            <div className="dropdown-content" onClick={() => setShowDropdown(false)}>
+                                <NavLink to='/produkter' className='nav-link drop'>Dagvatten- och granulatfilter</NavLink>
+                                <hr style={{ width: '100%', border: '1px solid rgb(239, 239, 239)' }} />
+                                <NavLink to='/projekt' className='nav-link drop'>Stora projekt</NavLink>
+                                <hr style={{ width: '100%', border: '1px solid rgb(239, 239, 239)' }} />
+                                <NavLink to='/montage' className='nav-link drop'>Montage</NavLink>
+                            </div>
+                        )}
                     </div>
                     <NavLink to='/dokumentcenter' className='nav-link'>Documentcenter</NavLink>
                     <NavLink to='/kontakta-oss' className='nav-link'>Kontakta oss</NavLink>

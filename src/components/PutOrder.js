@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import { useMutation, useQueryClient } from 'react-query'
+// import { useMutation, useQueryClient } from 'react-query'
 import logo from '../assets/logotype.png'
-import { addOrder } from '../data/api.js'
+// import { addOrder } from '../data/api.js'
 import { useNavigate } from 'react-router-dom'
+import emailjs from '@emailjs/browser';
 
 const PutOrder = ({ setOrderModalOpen }) => {
     const [error, setError] = useState(false)
@@ -33,13 +34,13 @@ const PutOrder = ({ setOrderModalOpen }) => {
         }
     }
 
-    const queryClient = useQueryClient()
+    // const queryClient = useQueryClient()
 
-    const addOrderMutation = useMutation(addOrder, {
-        onSuccess: () => {
-            queryClient.invalidateQueries('orders')
-        }
-    })
+    // const addOrderMutation = useMutation(addOrder, {
+    //     onSuccess: () => {
+    //         queryClient.invalidateQueries('orders')
+    //     }
+    // })
 
     const handleChangeInput = (e) => {
         setOrder({
@@ -54,9 +55,18 @@ const PutOrder = ({ setOrderModalOpen }) => {
         if (order.billingEmail === '' || order.billingFullName === '' || order.billingAddress === '' || order.billingCounty === '' || order.billingNumber === '') {
             setError(true)
         } else {
-            addOrderMutation.mutate({
-                ...order
-            })
+            
+            // addOrderMutation.mutate({
+            //     ...order
+            // }) 
+            // const form = {...order}
+            emailjs.sendForm('service_wp153qc', 'template_5y9kw8e', e.target, 'bxhMD_7j9kjdXdrQf')
+            .then((result) => {
+              console.log(result.text);
+            }, (error) => {
+              console.log(error.text);
+            });
+
             setError(false)
             setSuccess(true)
             navigate('/')

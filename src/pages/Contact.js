@@ -28,7 +28,6 @@ const Contact = () => {
       setError(true)
     }
     else {
-
       emailjs.sendForm('service_wp153qc', 'template_kpw777i', e.target, 'bxhMD_7j9kjdXdrQf')
         .then((result) => {
           console.log(result.text);
@@ -43,7 +42,6 @@ const Contact = () => {
       message.subject = ''
       message.body = ''
     }
-
   }
 
   return (

@@ -48,7 +48,7 @@ img {
   margin: 0 auto;
 }
 :hover {
-  transition: all 1s ease-in-out;
+  transition: all .3s;
 }
 
 
@@ -234,7 +234,6 @@ nav {
 .drop {
   padding-block: 1rem;
 }
-
 
 
 /* ---------menu modal----------- */
@@ -1160,7 +1159,7 @@ display: none;
   display: flex;
   flex-direction: column-reverse;
   box-shadow: var(--box-shadow);
-  transition: all 0.5s;
+  transition: all 0.3s;
   outline: 1px solid white;
 }
 .document-item:hover {
@@ -1207,7 +1206,7 @@ display: none;
   .document-item-text {
     flex: 3;
   }
-}
+} 
 /* for big devices */
 @media screen and (min-width: 1024px) {
   
