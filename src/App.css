@@ -1086,6 +1086,17 @@ display: none;
   background-color: white;
   padding: 2rem 1rem;
   border-radius: 5px;
+  overflow: scroll;
+  max-height: 500px;
+}
+.btn-admin-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btn-admin {
+  margin-top: -1rem;
+  align-self: center;
 }
 .admin-content .input-group {
   width: 100%;
@@ -1117,10 +1128,10 @@ display: none;
 .admin-input-field:focus {
   border: 1px solid var(--third-clr);
 } 
-.admin-form button {
+/* .admin-form button {
   margin-top: 2rem;
   align-self: flex-end;
-}
+} */
 
 
 .new-post-title {
@@ -1132,6 +1143,68 @@ display: none;
 .mt-2 {
   margin-top: 2rem;
 }
+
+
+
+/* ------post------ */
+.posts {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.post {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+  margin-block: 1rem;
+  border-radius: 5px;
+}
+.post-image,
+.post-data {
+  flex: 40%;
+  text-align: left;
+}
+.post-image {
+  overflow-x: hidden;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 5px 0px 0px 5px;
+}
+.no-post-image {
+  flex: 0;
+}
+.post-data {
+  padding: 1rem 1rem 1rem 0rem;
+}
+.post-data-only {
+  align-self: center;
+  text-align: center;
+  flex: 100%;
+  padding-block: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.post-tools {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-top: 1rem;
+  align-self: center;
+}
+.post-data-only input {
+  text-align: center;
+}
+.post-title, 
+.post-message {
+  border: 1px solid lightgray;
+  width: 100%;
+  padding: .1rem .5rem;
+}
+.post-title {
+  font-size: 20px;
+}
+
+
 
 
 

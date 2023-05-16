@@ -1,14 +1,6 @@
 {
   "posts": [
     {
-      "id": 1,
-      "date": "2022-12-21 15:00:33",
-      "link": "https://api.getanewsletter.com/v3/preview_mail/2975276/?public_key=737d71fb3f699a07fc68a2ef2cebefa1",
-      "image": "",
-      "title": "Nyhetsmail December",
-      "message": "Konstgräs, granulat, mikroplaster"
-    },
-    {
       "id": 2,
       "date": "2022-09-30 08:57:16",
       "link": "https://api.getanewsletter.com/v3/preview_mail/2945533/?public_key=69237ea8061938616780be1588663f13",
@@ -31,30 +23,6 @@
       "image": "https://media.getanewsletter.com/e137ab28-3c43-46a1-834b-f503fdccbd9b.jpg",
       "title": "Nyhetsmail Maj",
       "message": "Nytt filtermaterial. Skistar Hammarby"
-    },
-    {
-      "id": 5,
-      "date": "2022-03-08 09:01:27",
-      "link": "https://gansub.com/t/pm/5522424122725/",
-      "image": "https://media.getanewsletter.com/6977ebfe-44f2-460a-9e74-edccafba0924.jpg",
-      "title": "Nyhetsmail mars",
-      "message": "Filterbyten, IVL rapport. Mässor"
-    }
-  ],
-  "messages": [
-    {
-      "fullName": "la la",
-      "email": "la@mail.com",
-      "subject": "det här är ett ärende",
-      "body": "ärende",
-      "id": 1
-    },
-    {
-      "fullName": "lkad",
-      "email": "da",
-      "subject": "da",
-      "body": "a",
-      "id": 2
     }
   ],
   "orders": [

@@ -1,12 +1,10 @@
 import img from '../assets/28712055-9XX6s.jpg'
 import { useQuery } from 'react-query'
-import axios from 'axios';
 import Article from '../components/Article'
+import { getPosts } from '../data/api';
 
 const Home = () => {
-  const { isLoading, data, isError, error } = useQuery('posts', () => {
-    return axios.get('http://localhost:8000/posts')
-  })
+  const { isLoading, data, isError, error } = useQuery('posts', getPosts)
 
   return (
     <>
