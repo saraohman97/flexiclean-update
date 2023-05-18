@@ -313,6 +313,9 @@ nav {
 /* ---------sidebar section----------- */
 .home-sidebar {
   margin-top: 2rem;
+  overflow-y: scroll;
+  max-height: 1000px;
+  padding-right: 1.5rem;
 }
 .home-sidebar-data {
   display: flex;

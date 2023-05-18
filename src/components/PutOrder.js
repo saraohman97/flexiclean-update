@@ -25,8 +25,9 @@ const PutOrder = ({ setOrderModalOpen }) => {
     })
     const navigate = useNavigate()
     const [nextView, setNextView] = useState(false)
-    const onNextClick = () => {
-        if(order.fullName === '' || order.email === '' || order.width === '' || order.length === '' || order.type === '') {
+    const onNextClick = (e) => {
+        e.preventDefault()
+        if (order.fullName === '' || order.email === '' || order.width === '' || order.length === '' || order.type === '') {
             setError(true)
         } else {
             setError(false)
@@ -34,13 +35,6 @@ const PutOrder = ({ setOrderModalOpen }) => {
         }
     }
 
-    // const queryClient = useQueryClient()
-
-    // const addOrderMutation = useMutation(addOrder, {
-    //     onSuccess: () => {
-    //         queryClient.invalidateQueries('orders')
-    //     }
-    // })
 
     const handleChangeInput = (e) => {
         setOrder({
@@ -49,23 +43,36 @@ const PutOrder = ({ setOrderModalOpen }) => {
         })
     }
 
+    const handleSubmitFirstPart = (e) => {
+        return e.target
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault()
-
+        console.log(e)
         if (order.billingEmail === '' || order.billingFullName === '' || order.billingAddress === '' || order.billingCounty === '' || order.billingNumber === '') {
             setError(true)
         } else {
-            
-            // addOrderMutation.mutate({
-            //     ...order
-            // }) 
-            // const form = {...order}
+            // const address = {
+            //     company: order.company,
+            //     billingEmail: order.billingEmail,
+            //     billingFullName: order.billingFullName,
+            //     billingAddress: order.billingAddress,
+            //     billingCounty: order.billingCounty,
+            //     billingNumber: order.billingNumber
+            // }
+            // e.target.append(order.company)
+            // e.target.append(order.billingAddress)
+            // e.target.append(order.billingCounty)
+            // e.target.append(order.billingEmail)
+
+
             emailjs.sendForm('service_wp153qc', 'template_5y9kw8e', e.target, 'bxhMD_7j9kjdXdrQf')
-            .then((result) => {
-              console.log(result.text);
-            }, (error) => {
-              console.log(error.text);
-            });
+                .then((result) => {
+                    console.log(result.text);
+                }, (error) => {
+                    console.log(error.text);
+                });
 
             setError(false)
             setSuccess(true)
@@ -83,7 +90,7 @@ const PutOrder = ({ setOrderModalOpen }) => {
                 <button className="btn-close" onClick={() => setOrderModalOpen(false)}>X</button>
             </div>
 
-            <form className="order-form" onSubmit={handleSubmit}>
+            <form>
                 {!nextView && (
                     <>
                         <div className="order-form-left">

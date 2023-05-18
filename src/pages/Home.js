@@ -1,10 +1,16 @@
 import img from '../assets/28712055-9XX6s.jpg'
 import { useQuery } from 'react-query'
 import Article from '../components/Article'
-import { getPosts } from '../data/api';
+import { fetchPosts } from '../data/api';
 
 const Home = () => {
-  const { isLoading, data, isError, error } = useQuery('posts', getPosts)
+  const { data: posts, isLoading, isError, error } = useQuery({
+    queryKey: ["posts"],
+    queryFn: fetchPosts
+  })
+
+  if (isLoading) return 'Loading...'
+  if (isError) return `error: ${error.message}`
 
   return (
     <>
@@ -87,15 +93,9 @@ const Home = () => {
           <h3 className='home-sidebar-title'>Nyheter</h3>
 
           <div className="home-sidebar-data">
-            {data?.data.map((post) => {
-              return <Article key={post.id} post={post} />
-            })}
-            {isLoading && (
-              <h2 className='mt-2'>Loading....</h2>
-            )}
-            {isError && (
-              <h2 className='mt-2'>{error.message}</h2>
-            )}
+            {posts.map((post) => (
+              <Article key={post.id} post={post} />
+            ))}
           </div>
         </aside>
       </section>

@@ -1,30 +1,38 @@
-import axios from "axios";
-
-const postsApi = axios.create({
-    baseURL: "http://localhost:8000"
-})
-
-
-export const getPosts = async (posts) => {
-    return await postsApi.get("/posts", posts)
+export async function fetchPosts() {
+    const response = await fetch('http://localhost:8000/posts')
+    return response.json()
 }
 
-export const addPost = async (post) => {
-    return await postsApi.post("/posts", post)
+export async function fetchPost(id) {
+    const response = await fetch(`http://localhost:8000/posts/${id}`)
+    return response.json()
 }
 
-export const deletePost = async (id) => {
-    return await postsApi.delete(`/posts/${id}`, id)
+export async function createPost(newPost) {
+    const response = await fetch(`http://localhost:8000/posts`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newPost)
+    })
+    return response.json()
 }
 
+export async function updatePost(updatedPost) {
+    const response = await fetch(`http://localhost:8000/posts/${updatedPost.id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(updatedPost)
+    })
+    return response.json()
+}
 
-
-
-
-
-// export const addMessage = async (message) => {
-//     return await postsApi.post("/messages", message)
-// }
-// export const addOrder = async (order) => {
-//     return await postsApi.post("/orders", order)
-// }
+export async function deletePost(id) {
+    const response = await fetch(`http://localhost:8000/posts/${id}`, {
+        method: "DELETE",
+    })
+    return response.json()
+}

@@ -23,6 +23,20 @@
       "image": "https://media.getanewsletter.com/e137ab28-3c43-46a1-834b-f503fdccbd9b.jpg",
       "title": "Nyhetsmail Maj",
       "message": "Nytt filtermaterial. Skistar Hammarby"
+    },
+    {
+      "id": 5,
+      "title": "test last time",
+      "message": "test test",
+      "image": "",
+      "link": ""
+    },
+    {
+      "title": "nytt",
+      "message": "nytt",
+      "image": "C:\\fakepath\\134382317_10158433257811523_8881091179035883905_n.jpg",
+      "link": "",
+      "id": 6
     }
   ],
   "orders": [

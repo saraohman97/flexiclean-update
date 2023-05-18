@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { AiOutlineTwitter } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import { AiFillYoutube } from "react-icons/ai";
-import Admin from './Admin.js'
+import Login from './admin/Login.js';
 
 const Footer = () => {
   const [showAdmin, setShowAdmin] = useState(false)
@@ -16,7 +16,7 @@ const Footer = () => {
         <Link to='/kontakta-oss' className='footer-link'>Kontakta oss</Link>
         <div className='footer-link' onClick={() => setShowAdmin(true)}>Admin</div>
       </div>
-      {showAdmin && <Admin setShowAdmin={setShowAdmin} />}
+      {showAdmin && <Login setShowAdmin={setShowAdmin} />}
 
       <small className='copyright'>Copyright © 2015</small>
 
