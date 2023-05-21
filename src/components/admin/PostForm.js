@@ -43,11 +43,12 @@ const PostForm = ({ onSubmit, initialValue }) => {
             <div className='admin-input-wrapper'>
                 <div className="input-group">
                     <label htmlFor="text" className='label'>Bild</label>
-                    <input type="file" name='image' value={post['image']} onChange={handleChangeInput} className='input-field' />
+                    {/* <input type='file' alt='text' accept=".jpg, .jpeg, .png" name='image' value={post['image']} onChange={handleChangeInput} className='input-field' /> */}
+                    <input type='text' alt='text' accept=".jpg, .jpeg, .png" name='image' value={post['image']} onChange={handleChangeInput} className='input-field' />
                 </div>
                 <div className="input-group">
                     <label htmlFor="text" className='label'>Link</label>
-                    <input type="file" name='link' value={post['link']} onChange={handleChangeInput} className='input-field' />
+                    <input type="text" name='link' value={post['link']} onChange={handleChangeInput} className='input-field' />
                 </div>
             </div>
 

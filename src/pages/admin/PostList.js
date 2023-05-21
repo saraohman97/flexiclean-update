@@ -48,10 +48,12 @@ const PostItem = ({ post, handleDelete }) => {
   return (
     <div className="post" key={post.id}>
       <img src={post.image} className={post?.image === '' ? 'no-post-image' : 'post-image'} alt="" />
-
+      {/* <link rel="stylesheet" href={post.image} className={post?.image === null ? 'no-post-image' : 'post-image'} alt="" /> */}
+      
       <div className={post?.image === '' ? 'post-data-only' : 'post-data'}>
         <h2>{post.title}</h2>
         <p>{post.message}</p>
+      <a href={post.link}>Link här.</a>
         <div className="post-tools">
           <button onClick={() => navigate(`/post/${post.id}/uppdatera`)}>Edit</button>
           <button onClick={() => handleDelete(post.id)}>Ta bort</button>
