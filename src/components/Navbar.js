@@ -1,4 +1,3 @@
-// import logo from '../assets/logo.png'
 import logo from '../assets/logotype.png'
 import { Link, NavLink } from 'react-router-dom'
 import { AiOutlineDown } from "react-icons/ai";
@@ -41,7 +40,6 @@ const Navbar = ({ menuOpen, orderModalOpen, setOrderModalOpen, setMenuOpen, clos
                     <div className="menu-content">
                         <div className="btn-close" onClick={() => setMenuOpen(false)}> X</div>
                         <Link to='/' onClick={() => setMenuOpen(false)} className='nav-link'>Hem</Link>
-                        {/* <div className='nav-link no'>Produkter</div> */}
                         <div className='menu-df'>
                             <Link to='/produkter' onClick={() => setMenuOpen(false)} className='nav-link'>Dagvatten- och <br /> granulatfilter</Link>
                             <Link to='/projekt' onClick={() => setMenuOpen(false)} className='nav-link'>Stora projekt</Link>

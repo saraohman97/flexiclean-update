@@ -47,9 +47,6 @@ img {
   max-width: 1100px;
   margin: 0 auto;
 }
-:hover {
-  transition: all .3s;
-}
 
 
 /* ---------buttons----------- */
@@ -102,7 +99,6 @@ img {
   font-size: 13px;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 table {
   border-collapse: collapse;
   margin-top: 1rem;
@@ -119,15 +115,13 @@ table {
   color: gray;
 }
 td, th {
-  /* border: 1px solid #dddddd; */
   border-bottom: 1px solid #dddddd;
-  /* border-top: 1px solid #dddddd; */
   text-align: left;
   padding: 8px;
 }
-/* tr:nth-child(even) {
-  background-color: #dddddd;
-} */
+td:hover {
+  background-color: whitesmoke;
+}
 
 /* for small devices */
 @media screen and (max-width: 350px) {
@@ -176,6 +170,7 @@ nav {
   top: 0;
   font-size: 15px;
   font-family: 'Ysabeau', sans-serif;
+  padding-inline: 1rem;
 }
 .navbar-wrapper {
   min-height: 3rem;
@@ -198,7 +193,7 @@ nav {
   border-bottom: 1px solid rgb(0, 0, 0);
 }
 .nav-logo {
-  height: 2.5rem;
+  height: 2rem;
   object-fit: contain;
 }
 .nav-links {
@@ -384,6 +379,12 @@ nav {
 
 /* for small devices */
 @media screen and (max-width: 350px) {
+  nav {
+    padding-inline: .5rem 0rem;
+  }
+  .nav-logo {
+    height: 1.5rem;
+  }
   .footer-links {
     flex-direction: column;
   }
@@ -403,13 +404,16 @@ nav {
   }
 }
 @media screen and (min-width: 750px) {
+  .nav-logo {
+    height: 2.5rem;
+  }
   .menu, .menu-content {
     display: none;
   }
   .nav-links {
     display: flex;
     align-items: center;
-    padding-right: 1rem;
+    /* padding-right: 1rem; */
   }
   .hero h1 {
     font-size: 3.3rem;
@@ -652,13 +656,6 @@ nav {
   margin-bottom: 1rem;
 }
 
-/* .showcase6 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-} */
-
 /* for small devices */
 @media screen and (max-width: 350px) {
   
@@ -883,15 +880,6 @@ display: none;
   color: var(--third-clr);
   font-size: small;
 }
-/* .contact-input-field {
-  margin-bottom: 1rem;
-  padding: .5rem 1rem;
-  border-radius: 5px;
-  border: 1px solid lightgray;
-  outline: none;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  resize: none;
-} */
 .contact-input-field:focus {
   border: 1px solid var(--third-clr);
 } 
@@ -958,8 +946,6 @@ display: none;
   inset: 0;
   padding: 1rem;
   overflow-y: scroll;
-  /* display: flex;
-  flex-direction: column; */
 }
 .order-header {
   display: flex;
@@ -1000,10 +986,8 @@ display: none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   resize: none;
   width: 100%;
-  /* max-width: 400px; */
 }
 .input-field:hover {
-  /* border: 1px solid gray; */
   box-shadow: var(--box-shadow);
 }
 .input-field:focus {
@@ -1028,9 +1012,6 @@ display: none;
   display: flex;
   gap: 1rem;
 }
-/* .order-modal-prev {
-  display: flex;
-} */
 
 
 
@@ -1116,23 +1097,6 @@ display: none;
 .admin-subtitle {
   margin-bottom: 5vh;
 }
-/* .admin-label {
-  width: 100%;
-  margin-bottom: .5rem;
-  color: var(--third-clr);
-  font-size: small;
-}
-.admin-input-field {
-  margin-bottom: 1rem;
-  margin-top: .5rem;
-  width: 100%;
-  padding: .5rem 1rem;
-  border-radius: 5px;
-  border: 1px solid lightgray;
-  outline: none;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  resize: none;
-} */
 .admin-input-wrapper {
   display: flex;
   gap: 1rem;
@@ -1140,10 +1104,6 @@ display: none;
 .admin-input-field:focus {
   border: 1px solid var(--third-clr);
 } 
-/* .admin-form button {
-  margin-top: 2rem;
-  align-self: flex-end;
-} */
 
 
 .new-post-title {
@@ -1306,3 +1266,37 @@ display: none;
 .d-none {
   display: none;
 }
+
+
+/* ------------loader------------- */
+.loader {
+  margin: 10rem 45%;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid lightgray;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-bottom: 4px solid var(--second-clr);
+  border-left: 4px solid transparent;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 

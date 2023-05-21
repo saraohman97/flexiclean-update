@@ -22,9 +22,6 @@ const PostList = () => {
     }
   })
 
-  if (isLoading) return 'Loading...'
-  if (isError) return `error: ${error.message}`
-
   return (
     <div className="admin-content">
       <button className="btn-close" onClick={() => navigate('/')}>X</button>
@@ -32,9 +29,13 @@ const PostList = () => {
         <h1 className='admin-title'>Nyheter</h1>
         <h4 className='admin-subtitle'>Redigera inlägg</h4>
         <button onClick={() => navigate('/post/skapa')} className='btn btn-gray btn-admin'>Ny post</button>
-        {posts.map(post => (
-          <PostItem key={post.id} post={post} handleDelete={handleDelete} />
-        ))}
+        <div className="posts">
+          {posts ? posts.map(post => (
+            <PostItem key={post.id} post={post} handleDelete={handleDelete} />
+          )) : null}
+          {isLoading && <span className="loader"></span>}
+          {isError && <h2>{`error: ${error.message}`}</h2>}
+        </div>
       </div>
     </div>
   )
@@ -49,14 +50,14 @@ const PostItem = ({ post, handleDelete }) => {
     <div className="post" key={post.id}>
       <img src={post.image} className={post?.image === '' ? 'no-post-image' : 'post-image'} alt="" />
       {/* <link rel="stylesheet" href={post.image} className={post?.image === null ? 'no-post-image' : 'post-image'} alt="" /> */}
-      
+
       <div className={post?.image === '' ? 'post-data-only' : 'post-data'}>
         <h2>{post.title}</h2>
         <p>{post.message}</p>
-      <a href={post.link}>Link här.</a>
+        <a href={post.link}>Link här.</a>
         <div className="post-tools">
-          <button onClick={() => navigate(`/post/${post.id}/uppdatera`)}>Edit</button>
-          <button onClick={() => handleDelete(post.id)}>Ta bort</button>
+          <button className='btn btn-gray' onClick={() => navigate(`/post/${post.id}/uppdatera`)}>Edit</button>
+          <button className='btn btn-blue' onClick={() => handleDelete(post.id)}>Ta bort</button>
         </div>
       </div>
     </div>

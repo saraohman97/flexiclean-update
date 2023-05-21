@@ -9,9 +9,6 @@ const Home = () => {
     queryFn: fetchPosts
   })
 
-  if (isLoading) return 'Loading...'
-  if (isError) return `error: ${error.message}`
-
   return (
     <>
       <header className='hero'>
@@ -86,16 +83,16 @@ const Home = () => {
             <br />
             2019. Vinnare. Västmanlands Klimat- och Miljöpris.
           </p>
-
         </main>
 
         <aside className="home-sidebar">
           <h3 className='home-sidebar-title'>Nyheter</h3>
-
           <div className="home-sidebar-data">
-            {posts.map((post) => (
+            {posts ? posts.map((post) => (
               <Article key={post.id} post={post} />
-            ))}
+            )) : null}
+            {isLoading && <span className="loader"></span>} 
+            {isError && <h2>{`error: ${error.message}`}</h2>}
           </div>
         </aside>
       </section>

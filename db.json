@@ -1,11 +1,11 @@
 {
   "posts": [
     {
+      "id": 16,
       "title": "f",
       "message": "f",
       "image": "https://dst15js82dk7j.cloudfront.net/252829/70973512-v1vIr.jpg",
-      "link": "",
-      "id": 16
+      "link": ""
     },
     {
       "title": "s",
@@ -13,6 +13,13 @@
       "image": "https://media.getanewsletter.com/e137ab28-3c43-46a1-834b-f503fdccbd9b.jpg",
       "link": "",
       "id": 17
+    },
+    {
+      "id": 18,
+      "title": "Ny hemsida",
+      "message": "FlexiClean har en ny hemsida. ",
+      "image": "[url=https://ibb.co/P52hcVq][img]https://i.ibb.co/SKkntZF/Ska-rmavbild-2023-05-10-kl-14-12-15.png[/img][/url]",
+      "link": "flexiclean.netlify.app"
     }
   ],
   "orders": [

@@ -24,9 +24,6 @@ const EditPost = () => {
     updatePostMutation.mutate({ id, ...updatedPost })
   }
 
-  if (isLoading) return 'Loading...'
-  if (isError) return `error: ${error.message}`
-
   return (
     <div className="admin-content">
       <button className="btn-close" onClick={() => navigate('/')}>X</button>
@@ -34,7 +31,9 @@ const EditPost = () => {
         <h1 className='admin-title'>Skriv nyhet</h1>
         <h4 className='admin-subtitle'>Skriv ett nytt inlägg</h4>
 
-        <PostForm initialValue={post} onSubmit={handleSubmit} />
+        {isLoading && <span className="loader"></span>}
+        {isError && <h2>{`error: ${error.message}`}</h2>}
+        {post ? (<PostForm initialValue={post} onSubmit={handleSubmit} />) : null}
       </div>
     </div>
   )
