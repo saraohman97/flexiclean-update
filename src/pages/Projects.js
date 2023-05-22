@@ -92,7 +92,7 @@ const Projects = () => {
         <h1 className='project-title'>Uthyrning</h1>
         <p>Filterbrunnen för dagvattenrening finns för uthyrning via Terana AB. Kontakta oss för närmare information.</p>
         <div className="btn-wrapper">
-        <button className='btn btn-blue'>Kontakta oss</button>
+        <Link to='/kontakta-oss'><button className='btn btn-blue'>Kontakta oss</button></Link>
         <details>
               <summary className='btn btn-gray btn-filter'>Se storlek</summary>
               <table className='showcase6-table'>

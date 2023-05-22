@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const PostForm = ({ onSubmit, initialValue }) => {
+    const current = new Date();
     const navigate = useNavigate()
     const [post, setPost] = useState({
         title: initialValue.title || "",
         message: initialValue.message || "",
         image: initialValue.image || "",
-        link: initialValue.link || ""
+        link: initialValue.link || "",
+        date: `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`
     })
 
     const handleChangeInput = (e) => {
@@ -24,7 +26,8 @@ const PostForm = ({ onSubmit, initialValue }) => {
             title: "",
             message: "",
             image: "",
-            link: ""
+            link: "",
+            date: ""
         })
         navigate('/post')
     }

@@ -45,7 +45,7 @@ const Login = ({ setShowAdmin }) => {
 
                 {errorLogin && <p style={{ color: 'red' }}>Fel användarnamn eller lösenord.</p>}
 
-                <button onClick={handleLogin} className='btn btn-gray'>Logga in</button>
+                <button onClick={handleLogin} style={{ alignSelf: 'center', marginTop: '1rem' }} className='btn btn-gray'>Logga in</button>
             </div>
         </div>
     )
