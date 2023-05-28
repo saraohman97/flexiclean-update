@@ -267,6 +267,7 @@ nav {
 .hero {
   background-image: url(./assets/bg.jpg);
   background-size: cover;
+  background-position: center;
   height: 92vh;
   padding: 45vh 1rem 1rem;
 }
