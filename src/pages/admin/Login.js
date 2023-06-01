@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
-const Login = ({ setShowAdmin }) => {
+const Login = () => {
     const navigate = useNavigate()
     const [errorLogin, setErrorLogin] = useState(false)
     const [admin, setAdmin] = useState({
@@ -19,7 +19,6 @@ const Login = ({ setShowAdmin }) => {
     const handleLogin = (e) => {
         e.preventDefault()
         if (admin.user === 'a' && admin.password === 'a') {
-            setShowAdmin(false)
             navigate('/post/skapa')
         } else {
             setErrorLogin(true)
@@ -28,7 +27,7 @@ const Login = ({ setShowAdmin }) => {
 
     return (
         <div className="admin-content">
-            <button className="btn-close" onClick={() => setShowAdmin(false)}>X</button>
+            <Link to='/' className="btn-close">X</Link>
 
             <div className='admin-form'>
                 <h1 className='admin-title'>Admin</h1>

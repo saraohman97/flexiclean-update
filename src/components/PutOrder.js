@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import logo from '../assets/logotype.png'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import emailjs from '@emailjs/browser';
 
 const PutOrder = ({ setOrderModalOpen }) => {
@@ -64,7 +64,7 @@ const PutOrder = ({ setOrderModalOpen }) => {
                 <div>
                     <img className='nav-logo' src={logo} alt="logotype flexiclean blue gray grey logo" />
                 </div>
-                <button className="btn-close" onClick={() => setOrderModalOpen(false)}>X</button>
+                <Link to='/' className="btn-close" onClick={() => setOrderModalOpen(false)}>X</Link>
             </div>
 
             <form onSubmit={handleSubmit}>

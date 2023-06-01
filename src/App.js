@@ -20,7 +20,9 @@ import {
   QueryClientProvider,
 } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
-import Admin from './pages/admin/AddPost';
+import AddPost from './pages/admin/AddPost';
+import PutOrder from './components/PutOrder';
+import Login from './pages/admin/Login';
 
 
 const queryClient = new QueryClient()
@@ -46,7 +48,9 @@ function App() {
           <Route path='/montage' element={<Montage />} />
           <Route path='/kontakta-oss' element={<Contact />} />
           
-          <Route path='/post/skapa' element={<Admin />} />
+          <Route path='/beställning' element={<PutOrder setOrderModalOpen={setOrderModalOpen} />} />
+          <Route path='/logga-in' element={<Login />} />
+          <Route path='/post/skapa' element={<AddPost />} />
           <Route path='/post' element={<PostList />} />
           <Route path='/post/:id' element={<Post />} />
           <Route path='/post/:id/uppdatera' element={<EditPost />} />

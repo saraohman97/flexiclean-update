@@ -27,9 +27,9 @@ const Navbar = ({ menuOpen, orderModalOpen, setOrderModalOpen, setMenuOpen, clos
                     </div>
                     <NavLink to='/dokumentcenter' className='nav-link'>Documentcenter</NavLink>
                     <NavLink to='/kontakta-oss' className='nav-link'>Kontakta oss</NavLink>
-                    <button className='btn btn-gray order' onClick={() => setOrderModalOpen(true)}>Beställ</button>
+                    <NavLink to='/beställning' className='btn btn-gray order' onClick={() => setOrderModalOpen(true)}>Beställ</NavLink>
                 </div>
-                {orderModalOpen && <PutOrder setOrderModalOpen={setOrderModalOpen} />}
+                {/* {orderModalOpen && <PutOrder setOrderModalOpen={setOrderModalOpen} />} */}
 
                 {/* ------Menu------- */}
                 {!menuOpen ? (

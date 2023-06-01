@@ -92,7 +92,7 @@ const Home = () => {
               <Article key={post.id} post={post} />
             )) : null}
             {isLoading && <span className="loader"></span>} 
-            {isError && <h2>{`error: ${error.message}`}</h2>}
+            {isError && <h2 style={{ paddingTop: '3rem' }}>{`error: ${error.message}`}</h2>}
           </div>
         </aside>
       </section>

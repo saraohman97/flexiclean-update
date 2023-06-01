@@ -1,12 +1,9 @@
-import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AiOutlineTwitter } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import { AiFillYoutube } from "react-icons/ai";
-import Login from './admin/Login.js';
 
 const Footer = () => {
-  const [showAdmin, setShowAdmin] = useState(false)
 
   return (
     <div className='footer'>
@@ -14,9 +11,8 @@ const Footer = () => {
         <Link to='/' className='footer-link'>Hem</Link>
         <Link to='/produkter' className='footer-link'>Produkter</Link>
         <Link to='/kontakta-oss' className='footer-link'>Kontakta oss</Link>
-        <div className='footer-link' onClick={() => setShowAdmin(true)}>Admin</div>
+        <Link to='/logga-in' className='footer-link'>Admin</Link>
       </div>
-      {showAdmin && <Login setShowAdmin={setShowAdmin} />}
 
       <small className='copyright'>Copyright © 2015</small>
 
